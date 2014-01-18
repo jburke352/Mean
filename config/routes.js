@@ -17,13 +17,13 @@ module.exports = function(app, passport, auth) {
             'pages':    pages,
         };
 
-    //app.get('/signin', users.signin);
-    //app.get('/signout', users.signout);
-    //app.get('/signup', users.signup);
-    //app.post('/users', users.create);
-    //app.get('/routes', auth.requiresLogin, routes.all);
-    //app.post('/routes', auth.requiresLogin, routes.create);
-    //app.get('/articles', articles.all);
+    // app.get('/signin', users.signin);
+    // app.get('/signout', users.signout);
+    // app.get('/signup', users.signup);
+    // app.post('/users', users.create);
+    // app.get('/routes', auth.requiresLogin, routes.all);
+    // app.post('/routes', auth.requiresLogin, routes.create);
+    // app.get('/articles', articles.all);
     
     // app.get('/users/me', users.me);
     Route.find().sort('-created').exec(function(err, models) {
