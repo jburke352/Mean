@@ -1,7 +1,7 @@
 <section data-ng-controller="RoutesController" data-ng-init="find()">
     <ul class="routes unstyled">
         <li data-ng-repeat="route in routes">            
-            <h2><a data-ng-href="#!/routes/{{route._id}}">{{route.verb}} {{route.path}} -> {{route.controller}}/{{route.action}}</a></h2>
+            <h2><a data-ng-href="#!/routes/{{route._id}}/edit">{{route.verb}} {{route.path}} -> {{route.controller}}/{{route.action}}</a></h2>
         </li>
     </ul>
     <h1 data-ng-hide="!routes || routes.length">No routes yet. <br> Why don't you <a href="/#!/routes/create">Create One</a>?</h1>
