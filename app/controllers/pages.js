@@ -4,8 +4,7 @@
  * Module dependencies.
  */
 var mongoose    = require('mongoose'),
-    Page        = mongoose.model('Page'),
-    _           = require('lodash');
+    Page        = mongoose.model('Page');
 
 /**
  * Find article by id
