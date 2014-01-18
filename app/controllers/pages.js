@@ -8,6 +8,19 @@ var mongoose    = require('mongoose'),
     _           = require('lodash');
 
 /**
+ * Find article by id
+ */
+exports.page = function(req, res, next, id) {
+    Page.load(id, function(err, page) {
+        if (err) return next(err);
+        if (!page) return next(new Error('Failed to load page ' + id));
+        
+        req.page = page;
+        next();
+    });
+};
+
+/**
  * List of Articles
  */
 exports.all = function(req, res) {
@@ -41,3 +54,4 @@ exports.create = function(req, res) {
         }
     });
 };
+

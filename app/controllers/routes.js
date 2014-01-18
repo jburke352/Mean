@@ -24,7 +24,7 @@ exports.all = function(req, res) {
 
 
 /**
- * Create a article
+ * Create
  */
 exports.create = function(req, res) {
     var model = new Route(req.body);
@@ -40,4 +40,31 @@ exports.create = function(req, res) {
             res.jsonp(model);
         }
     });
+};
+
+/**
+ * Update
+ */
+exports.update = function(req, res) {
+    var model = req.page;
+
+    model = _.extend(model, req.body);
+
+    model.save(function(err) {
+        if (err) {
+            return res.send('users/signup', {
+                errors: err.errors,
+                page: model
+            });
+        } else {
+            res.jsonp(model);
+        }
+    });
+};
+
+/**
+ * Show
+ */
+exports.show = function(req, res) {
+    res.jsonp(req.route);
 };
