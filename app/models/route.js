@@ -17,4 +17,13 @@ var RouteSchema = new Schema({
     path:   	{type: String}
 });
 
+/**
+ * Statics
+ */
+RouteSchema.statics.load = function(id, cb) {
+    this.findOne({
+        _id: id
+    }).exec(cb);
+};
+
 mongoose.model('Route', RouteSchema);

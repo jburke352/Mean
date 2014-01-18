@@ -8,6 +8,20 @@ var mongoose    = require('mongoose'),
     _           = require('lodash');
 
 /**
+ * Find article by id
+ */
+exports.route = function(req, res, next, id) {
+    Route.load(id, function(err, route) {
+        if (err) return next(err);
+        if (!route) return next(new Error('Failed to load route ' + id));
+        
+        req.route = route;
+        next();
+    });
+};
+
+
+/**
  * List of Articles
  */
 exports.all = function(req, res) {
@@ -21,7 +35,6 @@ exports.all = function(req, res) {
         }
     });
 };
-
 
 /**
  * Create
