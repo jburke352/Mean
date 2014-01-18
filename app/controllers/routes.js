@@ -56,18 +56,36 @@ exports.create = function(req, res) {
 };
 
 /**
+ * Delete
+ */
+exports.destroy = function(req, res) {
+    var model = req.route;
+
+    model.remove(function(err) {
+        if (err) {
+            return res.send('users/signup', {
+                errors: err.errors,
+                ruote: model
+            });
+        } else {
+            res.jsonp(model);
+        }
+    });
+};
+
+/**
  * Update
  */
 exports.update = function(req, res) {
-    var model = req.page;
-
+    var model = req.route;
     model = _.extend(model, req.body);
+    console.log(model);
 
     model.save(function(err) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
-                page: model
+                route: model
             });
         } else {
             res.jsonp(model);

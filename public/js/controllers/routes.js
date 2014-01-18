@@ -33,4 +33,32 @@ angular.module('mean.routes').controller('RoutesController', ['$scope', '$routeP
         });
     };
 
+    $scope.remove = function(route) {
+        if (route) {
+            route.$remove();
+
+            for (var i in $scope.routes) {
+                if ($scope.routes[i] === route) {
+                    $scope.routes.splice(i, 1);
+                }
+            }
+        }
+        else {
+            $scope.route.$remove();
+            $location.path('routes');
+        }
+    };
+
+    $scope.update = function() {
+        var model = $scope.route;
+        if (!model.updated) {
+            model.updated = [];
+        }
+        model.updated.push(new Date().getTime());
+
+        model.$update(function() {
+            $location.path('routes/' + model._id);
+        });
+    };
+
 }]);

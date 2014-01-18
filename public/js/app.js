@@ -9,7 +9,7 @@ angular.module('mean', [
 	'mean.system', 
 	'mean.articles',
 	'mean.routes',
-	'mean.pages',
+	'mean.pages'
 ]);
 
 angular.module('mean.system', []);
