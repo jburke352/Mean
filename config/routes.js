@@ -35,10 +35,13 @@ module.exports = function(app, passport, auth) {
     app.get('/signin', users.signin);
     app.get('/signout', users.signout);
     app.get('/signup', users.signup);
-    app.post('/users', users.create);
-    app.get('/routes', auth.requiresLogin, routes.all);
-    app.post('/routes', auth.requiresLogin, routes.create);
-    app.get('/articles', articles.all);
+
+    //app.post('/users', users.create);
+    
+    //app.get('/routes', auth.requiresLogin, routes.all);
+    //app.post('/routes', auth.requiresLogin, routes.create);
+    
+    //app.get('/articles', articles.all);
 
     //Setting the local strategy route
     app.post('/users/session', passport.authenticate('local', {
