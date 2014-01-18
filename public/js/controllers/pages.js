@@ -4,12 +4,12 @@ angular.module('mean.pages').controller('PagesController', ['$scope', '$routePar
     $scope.global = Global;
 
     $scope.create = function() {
-        var model = new Pages({        
+        var model = new Pages({
             title: this.title,
             route: this.route
         });
 
-        model.$save(function(response) {
+        model.$save(function() {
             $location.path('pages');
         });
 
