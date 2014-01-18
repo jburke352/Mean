@@ -3,11 +3,11 @@
 /**
  * Module dependencies.
  */
-var express = require('express'),
-    mongoStore = require('connect-mongo')(express),
-    flash = require('connect-flash'),
-    helpers = require('view-helpers'),
-    config = require('./config');
+var express     = require('express'),
+    mongoStore  = require('connect-mongo')(express),
+    flash       = require('connect-flash'),
+    helpers     = require('view-helpers'),
+    config      = require('./config');
 
 module.exports = function(app, passport, db) {
     app.set('showStackError', true);

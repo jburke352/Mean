@@ -1,15 +1,42 @@
 'use strict';
 
+var mongoose    = require('mongoose'),
+    Route       = mongoose.model('Route');
+    
+
 module.exports = function(app, passport, auth) {
     //User Routes
-    var users = require('../app/controllers/users');
-    app.get('/signin', users.signin);
-    app.get('/signup', users.signup);
-    app.get('/signout', users.signout);
-    app.get('/users/me', users.me);
+    var users       = require('../app/controllers/users'),
+        routes      = require('../app/controllers/routes'),
+        articles    = require('../app/controllers/articles'),
+        controllers = {
+            'users':    users, 
+            'routes':   routes,
+            'articles': articles
+        };
 
-    //Setting up the users api
-    app.post('/users', users.create);
+    //app.get('/signin', users.signin);
+    //app.get('/signout', users.signout);
+    //app.get('/signup', users.signup);
+    //app.post('/users', users.create);
+    //app.get('/routes', auth.requiresLogin, routes.all);
+    //app.post('/routes', auth.requiresLogin, routes.create);
+    //app.get('/articles', articles.all);
+    
+    // app.get('/users/me', users.me);
+    Route.find().sort('-created').exec(function(err, models) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            for(var i=0; i < models.length; i++) {
+                var model = models[i];
+                console.log(model);
+                app[model.verb](model.path, controllers[model.controller][model.action])
+            }
+        }
+    });
 
     //Setting the local strategy route
     app.post('/users/session', passport.authenticate('local', {
@@ -61,14 +88,14 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the userId param
     app.param('userId', users.user);
 
-    //Article Routes
-    var articles = require('../app/controllers/articles');
+    //Article Routes    
     app.get('/articles', articles.all);
     app.post('/articles', auth.requiresLogin, articles.create);
     app.get('/articles/:articleId', articles.show);
     app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
     app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
 
+    
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
 
