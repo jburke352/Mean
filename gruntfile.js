@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-    
+    require('load-grunt-tasks')(grunt);
     // Project Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
             }
         },
         concurrent: {
-            tasks: ['jshint', 'watch', 'nodemon'],
+            tasks: ['watch', 'nodemon'],
             options: {
                 logConcurrentOutput: true
             }
@@ -89,12 +89,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-nodemon');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-env');
+    grunt.loadNpmTasks('grunt-livereload');
 
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
 
     //Default task(s).
-    grunt.registerTask('default', ['concurrent']);
+    grunt.registerTask('default', ['jshint', 'concurrent']);
 
     //Test task.
     grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
