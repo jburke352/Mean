@@ -24,13 +24,17 @@ script(type='text/javascript', src='/js/filters.js')
 //- Application Services
 script(type='text/javascript', src='/js/services/global.js')
 script(type='text/javascript', src='/js/services/articles.js')
+script(type='text/javascript', src='/js/services/routes.js')
+script(type='text/javascript', src='/js/services/pages.js')
 
 //- Application Controllers
 script(type='text/javascript', src='/js/controllers/articles.js')
 script(type='text/javascript', src='/js/controllers/index.js')
 script(type='text/javascript', src='/js/controllers/header.js')
+script(type='text/javascript', src='/js/controllers/routes.js')
+script(type='text/javascript', src='/js/controllers/pages.js')
 script(type='text/javascript', src='/js/init.js')
 
 if (process.env.NODE_ENV == 'development')
-    //Livereload script rendered
+    //- Livereload script rendered
     script(type='text/javascript', src='http://' + req.host + ':35729/livereload.js')
