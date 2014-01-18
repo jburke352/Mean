@@ -37,11 +37,6 @@ module.exports = function(app, passport, auth) {
     app.get('/signout', users.signout);
     app.get('/signup', users.signup);
 
-    //app.post('/users', users.create);    
-    //app.get('/routes', auth.requiresLogin, routes.all);
-    //app.post('/routes', auth.requiresLogin, routes.create);
-    //app.get('/articles', articles.all);
-
     //Setting the local strategy route
     app.post('/users/session', passport.authenticate('local', {
         failureRedirect: '/signin',
@@ -89,8 +84,6 @@ module.exports = function(app, passport, auth) {
         failureRedirect: '/signin'
     }), users.authCallback);
 
-    //Finish with setting up the userId param
-    app.param('userId', users.user);
 
     //Article Routes    
     app.get('/articles', articles.all);
@@ -99,10 +92,9 @@ module.exports = function(app, passport, auth) {
     app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
     app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
 
-    
-    //Finish with setting up the articleId param
-    app.param('articleId', articles.article);
-    app.param('routeId', routes.route);
+    app.param('articleId',  articles.article);
+    app.param('routeId',    routes.route);
+    app.param('userId',     users.user);
 
     //Home route
     var index = require('../app/controllers/index');
