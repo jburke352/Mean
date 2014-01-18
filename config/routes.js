@@ -17,6 +17,24 @@ module.exports = function(app, passport, auth) {
             'pages':    pages,
         };
 
+    // function exists(route) {
+    //     return Object.keys(app.routes).some(function (verb) {
+    //         return app.routes[verb].some(function (model) {
+    //             if (model.path === route) {
+    //                 return true;
+    //             }
+    //         });
+    //     });
+    // }
+
+    // function exists(verb, route) {
+    //     return app.routes[verb].some(function (model) {
+    //         if (model.path === route) {
+    //             return true;
+    //         }
+    //     });
+    // }
+
     // app.get('/users/me', users.me);
     Route.find(function (err, models) {
         if (err) {
@@ -24,11 +42,14 @@ module.exports = function(app, passport, auth) {
             return;
         }
 
-        models.forEach(function (model) {             
-            if(app[model.verb] 
-                && controllers[model.controller] 
-                && controllers[model.controller][model.action]) {
-                app[model.verb](model.path, controllers[model.controller][model.action]);
+        models.forEach(function (model) {
+            var ctrl   = controllers[model.controller],
+                action = ctrl && ctrl[model.action],
+                path   = model.path,
+                verb   = app[model.verb] && model.verb;
+
+            if (verb && path && action) {
+                app[verb](path, action);
             }
         });
     });
