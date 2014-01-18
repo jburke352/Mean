@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
+    
     // Project Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -9,20 +10,20 @@ module.exports = function(grunt) {
                 files: ['app/views/**'],
                 options: {
                     livereload: true,
-                },
+                }
             },
             js: {
                 files: ['gruntfile.js', 'server.js', 'app/**/*.js', 'public/js/**', 'test/**/*.js'],
                 tasks: ['jshint'],
                 options: {
                     livereload: true,
-                },
+                }
             },
             html: {
                 files: ['public/views/**'],
                 options: {
                     livereload: true,
-                },
+                }
             },
             css: {
                 files: ['public/css/**'],
@@ -56,28 +57,28 @@ module.exports = function(grunt) {
             }
         },
         concurrent: {
-            tasks: ['nodemon', 'watch'],
+            tasks: ['nodemon', 'jshint', 'watch'],
             options: {
                 logConcurrentOutput: true
             }
-        },
-        mochaTest: {
-            options: {
-                reporter: 'spec',
-                require: 'server.js'
-            },
-            src: ['test/mocha/**/*.js']
-        },
-        env: {
-            test: {
-                NODE_ENV: 'test'
-            }
-        },
-        karma: {
-            unit: {
-                configFile: 'test/karma/karma.conf.js'
-            }
         }
+        // mochaTest: {
+        //     options: {
+        //         reporter: 'spec',
+        //         require: 'server.js'
+        //     },
+        //     src: ['test/mocha/**/*.js']
+        // },
+        // env: {
+        //     test: {
+        //         NODE_ENV: 'test'
+        //     }
+        // },
+        // karma: {
+        //     unit: {
+        //         configFile: 'test/karma/karma.conf.js'
+        //     }
+        // }
     });
 
     //Load NPM tasks 
@@ -93,7 +94,7 @@ module.exports = function(grunt) {
     grunt.option('force', true);
 
     //Default task(s).
-    grunt.registerTask('default', ['jshint', 'concurrent']);
+    grunt.registerTask('default', ['concurrent']);
 
     //Test task.
     grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
