@@ -24,8 +24,12 @@ module.exports = function(app, passport, auth) {
             return;
         }
 
-        models.forEach(function (model) {
-            app[model.verb](model.path, controllers[model.controller][model.action]);
+        models.forEach(function (model) {             
+            if(app[model.verb] 
+                && controllers[model.controller] 
+                && controllers[model.controller][model.action]) {
+                app[model.verb](model.path, controllers[model.controller][model.action]);
+            }
         });
     });
 
