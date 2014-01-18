@@ -26,6 +26,13 @@ angular.module('mean.routes').controller('RoutesController', ['$scope', '$routeP
     $scope.find = function() {
         Routes.query(function(routes) {
             $scope.routes = routes;
+            console.log(routes);
+        });
+    };
+
+    $scope.findOne = function() {
+        Routes.get({routeId: $routeParams.routeId}, function(route) {
+            $scope.route = route;
         });
     };
 

@@ -4,14 +4,27 @@
  * Module dependencies.
  */
 var mongoose    = require('mongoose'),
-    Route       = mongoose.model('Route'),
+    Page        = mongoose.model('Page'),
     _           = require('lodash');
+
+/**
+ * Find article by id
+ */
+exports.page = function(req, res, next, id) {
+    Page.load(id, function(err, page) {
+        if (err) return next(err);
+        if (!page) return next(new Error('Failed to load page ' + id));
+        
+        req.page = page;
+        next();
+    });
+};
 
 /**
  * List of Articles
  */
 exports.all = function(req, res) {
-    Route.find().sort('-created').exec(function(err, models) {
+    Page.find().sort('-created').exec(function(err, models) {
         if (err) {
             res.render('error', {
                 status: 500
@@ -24,10 +37,10 @@ exports.all = function(req, res) {
 
 
 /**
- * Create
+ * Create a article
  */
 exports.create = function(req, res) {
-    var model = new Route(req.body);
+    var model = new Page(req.body);
     console.log(model);
 
     model.save(function(err) {
@@ -42,29 +55,3 @@ exports.create = function(req, res) {
     });
 };
 
-/**
- * Update
- */
-exports.update = function(req, res) {
-    var model = req.page;
-
-    model = _.extend(model, req.body);
-
-    model.save(function(err) {
-        if (err) {
-            return res.send('users/signup', {
-                errors: err.errors,
-                page: model
-            });
-        } else {
-            res.jsonp(model);
-        }
-    });
-};
-
-/**
- * Show
- */
-exports.show = function(req, res) {
-    res.jsonp(req.route);
-};

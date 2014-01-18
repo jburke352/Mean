@@ -9,10 +9,12 @@ module.exports = function(app, passport, auth) {
     var users       = require('../app/controllers/users'),
         routes      = require('../app/controllers/routes'),
         articles    = require('../app/controllers/articles'),
+        pages       = require('../app/controllers/pages'),
         controllers = {
             'users':    users, 
             'routes':   routes,
-            'articles': articles
+            'articles': articles,
+            'pages':    pages,
         };
 
     //app.get('/signin', users.signin);
