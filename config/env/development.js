@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: "mongodb://localhost/mean-dev",
+    db: "mongodb://hyperion.352media.local:27021/test",
     app: {
         name: "MEAN - A Modern Stack - Development"
     },
