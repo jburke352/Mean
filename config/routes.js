@@ -1,7 +1,7 @@
 'use strict';
 
-var mongoose    = require('mongoose'),
-    Route       = mongoose.model('Route');
+var mongoose = require('mongoose'),
+    Route    = mongoose.model('Route');
     
 
 module.exports = function(app, passport, auth) {
@@ -24,18 +24,15 @@ module.exports = function(app, passport, auth) {
     //app.get('/articles', articles.all);
     
     // app.get('/users/me', users.me);
-    Route.find().sort('-created').exec(function(err, models) {
+    Route.find(function (err, models) {
         if (err) {
-            res.render('error', {
-                status: 500
-            });
-        } else {
-            for(var i=0; i < models.length; i++) {
-                var model = models[i];
-                console.log(model);
-                app[model.verb](model.path, controllers[model.controller][model.action])
-            }
+            res.render('error', {status: 500});
+            return;
         }
+
+        models.forEach(function (model) {
+            app[model.verb](model.path, controllers[model.controller][model.action]);
+        });
     });
 
     //Setting the local strategy route
