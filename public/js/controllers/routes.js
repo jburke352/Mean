@@ -5,13 +5,13 @@ angular.module('mean.routes').controller('RoutesController', ['$scope', '$routeP
 
     $scope.create = function() {
         var model = new Routes({
-            action: 	this.action,
+            action:     this.action,
             controller: this.controller,
-            path: 		this.path,
+            path:       this.path,
             verb:       this.verb
         });
 
-        model.$save(function(response) {
+        model.$save(function() {
             $location.path('routes');
         });
 
@@ -27,7 +27,7 @@ angular.module('mean.routes').controller('RoutesController', ['$scope', '$routeP
         });
     };
 
-    $scope.findOne = function() {  
+    $scope.findOne = function() {
         Routes.get({routeId: $routeParams.routeId}, function(route) {
             $scope.route = route;
         });

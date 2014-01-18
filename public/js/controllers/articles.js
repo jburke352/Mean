@@ -44,9 +44,9 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
         });
     };
 
-    $scope.find = function() {        
+    $scope.find = function() {
         Articles.query(function(articles) {
-            $scope.articles = articles;            
+            $scope.articles = articles;
         });
     };
 
