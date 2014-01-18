@@ -12,7 +12,8 @@ var mongoose = require('mongoose'),
 var PageSchema = new Schema({
     created: {type: Date,   default: Date.now},
     title:   {type: String, default: '', trim: true},
+    route:   {type: String, default: '', trim: true}, 
     content: {type: String }
 });
 
-mongoose.model('Pages', PageSchema);
+mongoose.model('Page', PageSchema);

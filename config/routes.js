@@ -9,20 +9,14 @@ module.exports = function(app, passport, auth) {
     var users       = require('../app/controllers/users'),
         routes      = require('../app/controllers/routes'),
         articles    = require('../app/controllers/articles'),
+        pages       = require('../app/controllers/pages'),
         controllers = {
             'users':    users, 
             'routes':   routes,
-            'articles': articles
+            'articles': articles,
+            'pages':    pages,
         };
 
-    //app.get('/signin', users.signin);
-    //app.get('/signout', users.signout);
-    //app.get('/signup', users.signup);
-    //app.post('/users', users.create);
-    //app.get('/routes', auth.requiresLogin, routes.all);
-    //app.post('/routes', auth.requiresLogin, routes.create);
-    //app.get('/articles', articles.all);
-    
     // app.get('/users/me', users.me);
     Route.find(function (err, models) {
         if (err) {
@@ -34,6 +28,14 @@ module.exports = function(app, passport, auth) {
             app[model.verb](model.path, controllers[model.controller][model.action]);
         });
     });
+
+    app.get('/signin', users.signin);
+    app.get('/signout', users.signout);
+    app.get('/signup', users.signup);
+    app.post('/users', users.create);
+    app.get('/routes', auth.requiresLogin, routes.all);
+    app.post('/routes', auth.requiresLogin, routes.create);
+    app.get('/articles', articles.all);
 
     //Setting the local strategy route
     app.post('/users/session', passport.authenticate('local', {
