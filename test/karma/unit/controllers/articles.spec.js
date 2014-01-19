@@ -60,6 +60,7 @@
                     $httpBackend.flush();
 
                     // test scope value
+                alert(scope.articles);
                     expect(scope.articles).toEqualData([{
                         title: 'An Article about MEAN',
                         content: 'MEAN rocks!'
@@ -154,11 +155,11 @@
 
                 // testing the body data is out for now until an idea for testing the dynamic updated array value is figured out
                 //$httpBackend.expectPUT(/articles\/([0-9a-fA-F]{24})$/, putArticleData()).respond();
-                /*
-                Error: Expected PUT /articles\/([0-9a-fA-F]{24})$/ with different data
+
+                /*Error: Expected PUT /articles\/([0-9a-fA-F]{24})$/ with different data
                 EXPECTED: {"_id":"525a8422f6d0f87f0e407a33","title":"An Article about MEAN","to":"MEAN is great!"}
-                GOT:      {"_id":"525a8422f6d0f87f0e407a33","title":"An Article about MEAN","to":"MEAN is great!","updated":[1383534772975]}
-                */
+                GOT:      {"_id":"525a8422f6d0f87f0e407a33","title":"An Article about MEAN","to":"MEAN is great!","updated":[1383534772975]}*/
+
 
                 // run controller
                 scope.update();
@@ -193,6 +194,17 @@
                     expect(scope.articles.length).toBe(0);
 
                 }));
+
+           /* it('should have an article written by user named Navya' , inject(function(Articles){
+                var article = scope.find();
+
+                // mock rideshares in scope
+
+                alert(Articles);
+
+                expect(article.length).not.toBe(0);
+
+            }));*/
         });
     });
 }());
