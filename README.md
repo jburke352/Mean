@@ -1,3 +1,5 @@
+staging site hosted on heroku at [http://staging.mean.352media.com](http://staging.mean.352media.com)
+continuous integration and deployment from master branch by codeship
 ![codeship status](https://www.codeship.io/projects/8522e100-62c7-0131-2758-5a050d54ccc7/status)
 # MEAN Stack
 
