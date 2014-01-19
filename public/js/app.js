@@ -4,6 +4,8 @@ angular.module('mean', [
 	'ngCookies', 
 	'ngResource', 
 	'ngRoute', 
+	'ngSanitize',
+	'ngCkeditor',
 	'ui.bootstrap', 
 	'ui.route', 
 	'mean.system', 
