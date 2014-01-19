@@ -5,8 +5,9 @@ angular.module('mean.pages').controller('PagesController', ['$scope', '$routePar
 
     $scope.create = function() {
         var model = new Pages({
-            title: this.title,
-            route: this.route
+            title:      this.title,
+            route:      this.route,
+            content:    this.content
         });
 
         model.$save(function() {
@@ -15,6 +16,7 @@ angular.module('mean.pages').controller('PagesController', ['$scope', '$routePar
 
         this.title     = '';
         this.route     = '';
+        this.content   = '';
     };
 
     $scope.find = function() {
