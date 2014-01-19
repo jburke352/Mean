@@ -4,8 +4,14 @@ var mongoose = require('mongoose'),
     Page     = mongoose.model('Page'),
     Route    = mongoose.model('Route');
 
-function find_page(model) {
-    Page.findOne({route: model.path});
+function find_page(req, res) {
+    Page.findOne({route: req.path}, function (err, page) {
+        if (err) {
+            return res.send('/');
+        }
+
+        res.jsonp(page);
+    });
 }
 
 exports.add = function (app, model) {
