@@ -6,7 +6,7 @@
   "author": "Amos Haviv",
   "repository": {
     "type": "git",
-    "url": "https://github.com/linnovate/mean.git"
+    "url": "https://github.com/352Media/Mean.git"
   },
   "engines": {
     "node": "0.10.x",
@@ -55,7 +55,8 @@
     "grunt-nodemon": "~0.1.2",
     "grunt-contrib-watch": "~0.5.3",
     "karma-coverage": "~0.1.4",
-    "karma": "~0.10.9"
+    "karma": "~0.10.9",
+    "nodemon": "~1.0.12"
   },
   "devDependencies": {
     "supertest": "latest",
@@ -75,6 +76,8 @@
     "karma-phantomjs-launcher": "~0.1.0",
     "karma": "~0.10.4",
     "grunt-karma": "~0.6.2",
-    "karma-coverage": "~0.1.4"
+    "karma-coverage": "~0.1.4",
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-livereload": "~0.1.3"
   }
 }
