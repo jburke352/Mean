@@ -27,12 +27,12 @@ module.exports = function(app, passport, auth) {
     //     });
     // }
 
-    // function exists(verb, route) {
-    //     return app.routes[verb].some(function (model) {
+    // function exists(verb, route, callback, context) {
+    //     callback.call(context, app.routes[verb].some(function (model) {
     //         if (model.path === route) {
     //             return true;
     //         }
-    //     });
+    //     }));
     // }
 
     // app.get('/users/me', users.me);
