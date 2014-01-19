@@ -1,0 +1,949 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'karma-coverage' ]
+2 info using npm@1.3.23
+3 info using node@v0.10.24
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'karma-coverage@~0.1.4', null ]
+7 verbose cache add name=undefined spec="karma-coverage@~0.1.4" args=["karma-coverage@~0.1.4",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'karma-coverage@~0.1.4',
+8 verbose parsed url   path: 'karma-coverage@~0.1.4',
+8 verbose parsed url   href: 'karma-coverage@~0.1.4' }
+9 verbose cache add name="karma-coverage" spec="~0.1.4" args=["karma-coverage","~0.1.4"]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: '~0.1.4',
+10 verbose parsed url   path: '~0.1.4',
+10 verbose parsed url   href: '~0.1.4' }
+11 verbose addNamed [ 'karma-coverage', '~0.1.4' ]
+12 verbose addNamed [ null, '>=0.1.4-0 <0.2.0-0' ]
+13 silly lockFile bb11377a-karma-coverage-0-1-4 karma-coverage@~0.1.4
+14 verbose lock karma-coverage@~0.1.4 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\bb11377a-karma-coverage-0-1-4.lock
+15 silly addNameRange { name: 'karma-coverage',
+15 silly addNameRange   range: '>=0.1.4-0 <0.2.0-0',
+15 silly addNameRange   hasData: false }
+16 verbose url raw karma-coverage
+17 verbose url resolving [ 'https://registry.npmjs.org/', './karma-coverage' ]
+18 verbose url resolved https://registry.npmjs.org/karma-coverage
+19 info trying registry request attempt 1 at 13:01:15
+20 verbose etag "DC1VS8Y9X7TVFY3NG6V2EN76J"
+21 http GET https://registry.npmjs.org/karma-coverage
+22 http 304 https://registry.npmjs.org/karma-coverage
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Sun, 19 Jan 2014 18:01:16 GMT',
+23 silly registry.get     server: 'Apache',
+23 silly registry.get     connection: 'Keep-Alive',
+23 silly registry.get     'keep-alive': 'timeout=10, max=50',
+23 silly registry.get     etag: '"DC1VS8Y9X7TVFY3NG6V2EN76J"',
+23 silly registry.get     vary: 'Accept' } ]
+24 verbose etag karma-coverage from cache
+25 silly addNameRange number 2 { name: 'karma-coverage',
+25 silly addNameRange   range: '>=0.1.4-0 <0.2.0-0',
+25 silly addNameRange   hasData: true }
+26 silly addNameRange versions [ 'karma-coverage',
+26 silly addNameRange   [ '0.0.1',
+26 silly addNameRange     '0.0.2',
+26 silly addNameRange     '0.0.3',
+26 silly addNameRange     '0.0.4',
+26 silly addNameRange     '0.0.5',
+26 silly addNameRange     '0.1.0',
+26 silly addNameRange     '0.1.1',
+26 silly addNameRange     '0.1.2',
+26 silly addNameRange     '0.1.3',
+26 silly addNameRange     '0.1.4' ] ]
+27 verbose addNamed [ 'karma-coverage', '0.1.4' ]
+28 verbose addNamed [ '0.1.4', '0.1.4' ]
+29 silly lockFile c5356c85-karma-coverage-0-1-4 karma-coverage@0.1.4
+30 verbose lock karma-coverage@0.1.4 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\c5356c85-karma-coverage-0-1-4.lock
+31 silly lockFile c5356c85-karma-coverage-0-1-4 karma-coverage@0.1.4
+32 silly lockFile c5356c85-karma-coverage-0-1-4 karma-coverage@0.1.4
+33 silly lockFile bb11377a-karma-coverage-0-1-4 karma-coverage@~0.1.4
+34 silly lockFile bb11377a-karma-coverage-0-1-4 karma-coverage@~0.1.4
+35 silly resolved [ { name: 'karma-coverage',
+35 silly resolved     version: '0.1.4',
+35 silly resolved     description: 'A Karma plugin. Generate code coverage.',
+35 silly resolved     main: 'lib/index.js',
+35 silly resolved     scripts: { test: 'grunt test' },
+35 silly resolved     repository:
+35 silly resolved      { type: 'git',
+35 silly resolved        url: 'git://github.com/karma-runner/karma-coverage.git' },
+35 silly resolved     keywords:
+35 silly resolved      [ 'karma-plugin',
+35 silly resolved        'karma-preprocessor',
+35 silly resolved        'karma-reporter',
+35 silly resolved        'coverage',
+35 silly resolved        'istanbul' ],
+35 silly resolved     author: { name: 'SATO taichi', email: 'ryushi@gmail.com' },
+35 silly resolved     dependencies: { istanbul: '~0.1.45', ibrik: '~1.0.1', dateformat: '~1.0.6' },
+35 silly resolved     peerDependencies: { karma: '>=0.9' },
+35 silly resolved     license: 'MIT',
+35 silly resolved     devDependencies:
+35 silly resolved      { mocks: '0.0.11',
+35 silly resolved        grunt: '~0.4.1',
+35 silly resolved        'grunt-simple-mocha': '~0.4.0',
+35 silly resolved        'grunt-contrib-jshint': '~0.6.0',
+35 silly resolved        karma: '~0.9.3',
+35 silly resolved        sinon: '~1.7.3',
+35 silly resolved        chai: '~1.7.2',
+35 silly resolved        'sinon-chai': '~2.4.0',
+35 silly resolved        'grunt-bump': '~0.0.7',
+35 silly resolved        'grunt-npm': '~0.0.2',
+35 silly resolved        'grunt-auto-release': '~0.0.1' },
+35 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+35 silly resolved     bugs: { url: 'https://github.com/karma-runner/karma-coverage/issues' },
+35 silly resolved     readme: 'ERROR: No README data found!',
+35 silly resolved     homepage: 'https://github.com/karma-runner/karma-coverage',
+35 silly resolved     _id: 'karma-coverage@0.1.4',
+35 silly resolved     _from: 'karma-coverage@~0.1.4' } ]
+36 info install karma-coverage@0.1.4 into C:\Users\io.352MEDIA\Documents\GitHub\Mean
+37 info installOne karma-coverage@0.1.4
+38 info C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage unbuild
+39 verbose tar unpack C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\karma-coverage\0.1.4\package.tgz
+40 silly lockFile 1502d5f0-Mean-node-modules-karma-coverage tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage
+41 verbose lock tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\1502d5f0-Mean-node-modules-karma-coverage.lock
+42 silly lockFile 398e137a-karma-coverage-0-1-4-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\karma-coverage\0.1.4\package.tgz
+43 verbose lock tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\karma-coverage\0.1.4\package.tgz C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\398e137a-karma-coverage-0-1-4-package-tgz.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 silly gunzTarPerm extractEntry package.json
+46 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+47 silly gunzTarPerm extractEntry LICENSE
+48 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+49 silly gunzTarPerm extractEntry lib/index.js
+50 silly gunzTarPerm modified mode [ 'lib/index.js', 438, 420 ]
+51 silly gunzTarPerm extractEntry lib/preprocessor.js
+52 silly gunzTarPerm modified mode [ 'lib/preprocessor.js', 438, 420 ]
+53 silly gunzTarPerm extractEntry lib/reporter.js
+54 silly gunzTarPerm modified mode [ 'lib/reporter.js', 438, 420 ]
+55 silly lockFile 1502d5f0-Mean-node-modules-karma-coverage tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage
+56 silly lockFile 1502d5f0-Mean-node-modules-karma-coverage tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage
+57 silly lockFile 398e137a-karma-coverage-0-1-4-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\karma-coverage\0.1.4\package.tgz
+58 silly lockFile 398e137a-karma-coverage-0-1-4-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\karma-coverage\0.1.4\package.tgz
+59 info preinstall karma-coverage@0.1.4
+60 verbose readDependencies using package.json deps
+61 verbose readDependencies using package.json deps
+62 verbose cache add [ 'istanbul@~0.1.45', null ]
+63 verbose cache add name=undefined spec="istanbul@~0.1.45" args=["istanbul@~0.1.45",null]
+64 verbose parsed url { protocol: null,
+64 verbose parsed url   slashes: null,
+64 verbose parsed url   auth: null,
+64 verbose parsed url   host: null,
+64 verbose parsed url   port: null,
+64 verbose parsed url   hostname: null,
+64 verbose parsed url   hash: null,
+64 verbose parsed url   search: null,
+64 verbose parsed url   query: null,
+64 verbose parsed url   pathname: 'istanbul@~0.1.45',
+64 verbose parsed url   path: 'istanbul@~0.1.45',
+64 verbose parsed url   href: 'istanbul@~0.1.45' }
+65 verbose cache add name="istanbul" spec="~0.1.45" args=["istanbul","~0.1.45"]
+66 verbose parsed url { protocol: null,
+66 verbose parsed url   slashes: null,
+66 verbose parsed url   auth: null,
+66 verbose parsed url   host: null,
+66 verbose parsed url   port: null,
+66 verbose parsed url   hostname: null,
+66 verbose parsed url   hash: null,
+66 verbose parsed url   search: null,
+66 verbose parsed url   query: null,
+66 verbose parsed url   pathname: '~0.1.45',
+66 verbose parsed url   path: '~0.1.45',
+66 verbose parsed url   href: '~0.1.45' }
+67 verbose addNamed [ 'istanbul', '~0.1.45' ]
+68 verbose addNamed [ null, '>=0.1.45-0 <0.2.0-0' ]
+69 silly lockFile e6699f3e-istanbul-0-1-45 istanbul@~0.1.45
+70 verbose lock istanbul@~0.1.45 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\e6699f3e-istanbul-0-1-45.lock
+71 verbose cache add [ 'ibrik@~1.0.1', null ]
+72 verbose cache add name=undefined spec="ibrik@~1.0.1" args=["ibrik@~1.0.1",null]
+73 verbose parsed url { protocol: null,
+73 verbose parsed url   slashes: null,
+73 verbose parsed url   auth: null,
+73 verbose parsed url   host: null,
+73 verbose parsed url   port: null,
+73 verbose parsed url   hostname: null,
+73 verbose parsed url   hash: null,
+73 verbose parsed url   search: null,
+73 verbose parsed url   query: null,
+73 verbose parsed url   pathname: 'ibrik@~1.0.1',
+73 verbose parsed url   path: 'ibrik@~1.0.1',
+73 verbose parsed url   href: 'ibrik@~1.0.1' }
+74 verbose cache add name="ibrik" spec="~1.0.1" args=["ibrik","~1.0.1"]
+75 verbose parsed url { protocol: null,
+75 verbose parsed url   slashes: null,
+75 verbose parsed url   auth: null,
+75 verbose parsed url   host: null,
+75 verbose parsed url   port: null,
+75 verbose parsed url   hostname: null,
+75 verbose parsed url   hash: null,
+75 verbose parsed url   search: null,
+75 verbose parsed url   query: null,
+75 verbose parsed url   pathname: '~1.0.1',
+75 verbose parsed url   path: '~1.0.1',
+75 verbose parsed url   href: '~1.0.1' }
+76 verbose addNamed [ 'ibrik', '~1.0.1' ]
+77 verbose addNamed [ null, '>=1.0.1-0 <1.1.0-0' ]
+78 silly lockFile 8268bf66-ibrik-1-0-1 ibrik@~1.0.1
+79 verbose lock ibrik@~1.0.1 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\8268bf66-ibrik-1-0-1.lock
+80 verbose cache add [ 'dateformat@~1.0.6', null ]
+81 verbose cache add name=undefined spec="dateformat@~1.0.6" args=["dateformat@~1.0.6",null]
+82 verbose parsed url { protocol: null,
+82 verbose parsed url   slashes: null,
+82 verbose parsed url   auth: null,
+82 verbose parsed url   host: null,
+82 verbose parsed url   port: null,
+82 verbose parsed url   hostname: null,
+82 verbose parsed url   hash: null,
+82 verbose parsed url   search: null,
+82 verbose parsed url   query: null,
+82 verbose parsed url   pathname: 'dateformat@~1.0.6',
+82 verbose parsed url   path: 'dateformat@~1.0.6',
+82 verbose parsed url   href: 'dateformat@~1.0.6' }
+83 verbose cache add name="dateformat" spec="~1.0.6" args=["dateformat","~1.0.6"]
+84 verbose parsed url { protocol: null,
+84 verbose parsed url   slashes: null,
+84 verbose parsed url   auth: null,
+84 verbose parsed url   host: null,
+84 verbose parsed url   port: null,
+84 verbose parsed url   hostname: null,
+84 verbose parsed url   hash: null,
+84 verbose parsed url   search: null,
+84 verbose parsed url   query: null,
+84 verbose parsed url   pathname: '~1.0.6',
+84 verbose parsed url   path: '~1.0.6',
+84 verbose parsed url   href: '~1.0.6' }
+85 verbose addNamed [ 'dateformat', '~1.0.6' ]
+86 verbose addNamed [ null, '>=1.0.6-0 <1.1.0-0' ]
+87 silly lockFile 7bc67268-dateformat-1-0-6 dateformat@~1.0.6
+88 verbose lock dateformat@~1.0.6 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\7bc67268-dateformat-1-0-6.lock
+89 silly addNameRange { name: 'istanbul',
+89 silly addNameRange   range: '>=0.1.45-0 <0.2.0-0',
+89 silly addNameRange   hasData: false }
+90 silly addNameRange { name: 'ibrik', range: '>=1.0.1-0 <1.1.0-0', hasData: false }
+91 silly addNameRange { name: 'dateformat',
+91 silly addNameRange   range: '>=1.0.6-0 <1.1.0-0',
+91 silly addNameRange   hasData: false }
+92 verbose url raw ibrik
+93 verbose url resolving [ 'https://registry.npmjs.org/', './ibrik' ]
+94 verbose url resolved https://registry.npmjs.org/ibrik
+95 info trying registry request attempt 1 at 13:01:15
+96 verbose etag "AFWU42PAB9EXC22YCNST41KOD"
+97 http GET https://registry.npmjs.org/ibrik
+98 verbose url raw istanbul
+99 verbose url resolving [ 'https://registry.npmjs.org/', './istanbul' ]
+100 verbose url resolved https://registry.npmjs.org/istanbul
+101 info trying registry request attempt 1 at 13:01:15
+102 verbose etag "191MQ8ERCIYY3SU86GIYY1WCZ"
+103 http GET https://registry.npmjs.org/istanbul
+104 verbose url raw dateformat
+105 verbose url resolving [ 'https://registry.npmjs.org/', './dateformat' ]
+106 verbose url resolved https://registry.npmjs.org/dateformat
+107 info trying registry request attempt 1 at 13:01:15
+108 verbose etag "3LKPY5705IYM68MBN04NNB3S3"
+109 http GET https://registry.npmjs.org/dateformat
+110 http 304 https://registry.npmjs.org/dateformat
+111 silly registry.get cb [ 304,
+111 silly registry.get   { date: 'Sun, 19 Jan 2014 18:01:16 GMT',
+111 silly registry.get     server: 'Apache',
+111 silly registry.get     connection: 'Keep-Alive',
+111 silly registry.get     'keep-alive': 'timeout=10, max=50',
+111 silly registry.get     etag: '"3LKPY5705IYM68MBN04NNB3S3"',
+111 silly registry.get     vary: 'Accept' } ]
+112 verbose etag dateformat from cache
+113 http 304 https://registry.npmjs.org/ibrik
+114 silly registry.get cb [ 304,
+114 silly registry.get   { date: 'Sun, 19 Jan 2014 18:01:16 GMT',
+114 silly registry.get     server: 'Apache',
+114 silly registry.get     connection: 'Keep-Alive',
+114 silly registry.get     'keep-alive': 'timeout=10, max=50',
+114 silly registry.get     etag: '"AFWU42PAB9EXC22YCNST41KOD"',
+114 silly registry.get     vary: 'Accept' } ]
+115 verbose etag ibrik from cache
+116 http 304 https://registry.npmjs.org/istanbul
+117 silly registry.get cb [ 304,
+117 silly registry.get   { date: 'Sun, 19 Jan 2014 18:01:16 GMT',
+117 silly registry.get     server: 'Apache',
+117 silly registry.get     connection: 'Keep-Alive',
+117 silly registry.get     'keep-alive': 'timeout=10, max=50',
+117 silly registry.get     etag: '"191MQ8ERCIYY3SU86GIYY1WCZ"',
+117 silly registry.get     vary: 'Accept' } ]
+118 verbose etag istanbul from cache
+119 silly addNameRange number 2 { name: 'dateformat',
+119 silly addNameRange   range: '>=1.0.6-0 <1.1.0-0',
+119 silly addNameRange   hasData: true }
+120 silly addNameRange versions [ 'dateformat',
+120 silly addNameRange   [ '0.9.0-1.2.3',
+120 silly addNameRange     '1.0.0-1.2.3',
+120 silly addNameRange     '1.0.1-1.2.3',
+120 silly addNameRange     '1.0.2-1.2.3',
+120 silly addNameRange     '1.0.3-1.2.3',
+120 silly addNameRange     '1.0.4-1.2.3',
+120 silly addNameRange     '1.0.5-1.2.3',
+120 silly addNameRange     '1.0.6-1.2.3',
+120 silly addNameRange     '1.0.7-1.2.3' ] ]
+121 verbose addNamed [ 'dateformat', '1.0.7-1.2.3' ]
+122 verbose addNamed [ '1.0.7-1.2.3', '1.0.7-1.2.3' ]
+123 silly lockFile 066f9cb9-dateformat-1-0-7-1-2-3 dateformat@1.0.7-1.2.3
+124 verbose lock dateformat@1.0.7-1.2.3 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\066f9cb9-dateformat-1-0-7-1-2-3.lock
+125 silly addNameRange number 2 { name: 'ibrik', range: '>=1.0.1-0 <1.1.0-0', hasData: true }
+126 silly addNameRange versions [ 'ibrik',
+126 silly addNameRange   [ '0.0.1-dev',
+126 silly addNameRange     '0.0.1',
+126 silly addNameRange     '0.0.2',
+126 silly addNameRange     '0.0.3',
+126 silly addNameRange     '0.0.3-1',
+126 silly addNameRange     '0.0.3-2',
+126 silly addNameRange     '0.0.4',
+126 silly addNameRange     '1.0.1' ] ]
+127 verbose addNamed [ 'ibrik', '1.0.1' ]
+128 verbose addNamed [ '1.0.1', '1.0.1' ]
+129 silly lockFile eeb5b243-ibrik-1-0-1 ibrik@1.0.1
+130 verbose lock ibrik@1.0.1 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\eeb5b243-ibrik-1-0-1.lock
+131 silly addNameRange number 2 { name: 'istanbul', range: '>=0.1.45-0 <0.2.0-0', hasData: true }
+132 silly addNameRange versions [ 'istanbul',
+132 silly addNameRange   [ '0.1.0',
+132 silly addNameRange     '0.1.1',
+132 silly addNameRange     '0.1.2',
+132 silly addNameRange     '0.1.3',
+132 silly addNameRange     '0.1.4',
+132 silly addNameRange     '0.1.5',
+132 silly addNameRange     '0.1.6',
+132 silly addNameRange     '0.1.7',
+132 silly addNameRange     '0.1.8',
+132 silly addNameRange     '0.1.9',
+132 silly addNameRange     '0.1.10',
+132 silly addNameRange     '0.1.11',
+132 silly addNameRange     '0.1.12',
+132 silly addNameRange     '0.1.13',
+132 silly addNameRange     '0.1.14',
+132 silly addNameRange     '0.1.15',
+132 silly addNameRange     '0.1.16',
+132 silly addNameRange     '0.1.17',
+132 silly addNameRange     '0.1.18',
+132 silly addNameRange     '0.1.19',
+132 silly addNameRange     '0.1.20',
+132 silly addNameRange     '0.1.21',
+132 silly addNameRange     '0.1.22',
+132 silly addNameRange     '0.1.23',
+132 silly addNameRange     '0.1.24',
+132 silly addNameRange     '0.1.25',
+132 silly addNameRange     '0.1.26',
+132 silly addNameRange     '0.1.27',
+132 silly addNameRange     '0.1.28',
+132 silly addNameRange     '0.1.29',
+132 silly addNameRange     '0.1.30',
+132 silly addNameRange     '0.1.31',
+132 silly addNameRange     '0.1.32',
+132 silly addNameRange     '0.1.33',
+132 silly addNameRange     '0.1.34',
+132 silly addNameRange     '0.1.35',
+132 silly addNameRange     '0.1.36',
+132 silly addNameRange     '0.1.37',
+132 silly addNameRange     '0.1.38',
+132 silly addNameRange     '0.1.39',
+132 silly addNameRange     '0.1.40',
+132 silly addNameRange     '0.1.41',
+132 silly addNameRange     '0.1.42',
+132 silly addNameRange     '0.1.43',
+132 silly addNameRange     '0.1.44',
+132 silly addNameRange     '0.1.45',
+132 silly addNameRange     '0.1.46',
+132 silly addNameRange     '0.2.0',
+132 silly addNameRange     '0.2.1',
+132 silly addNameRange     '0.2.2',
+132 silly addNameRange     '0.2.3' ] ]
+133 verbose addNamed [ 'istanbul', '0.1.46' ]
+134 verbose addNamed [ '0.1.46', '0.1.46' ]
+135 silly lockFile 0d8aeccf-istanbul-0-1-46 istanbul@0.1.46
+136 verbose lock istanbul@0.1.46 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\0d8aeccf-istanbul-0-1-46.lock
+137 silly lockFile 066f9cb9-dateformat-1-0-7-1-2-3 dateformat@1.0.7-1.2.3
+138 silly lockFile 066f9cb9-dateformat-1-0-7-1-2-3 dateformat@1.0.7-1.2.3
+139 silly lockFile 7bc67268-dateformat-1-0-6 dateformat@~1.0.6
+140 silly lockFile 7bc67268-dateformat-1-0-6 dateformat@~1.0.6
+141 silly lockFile eeb5b243-ibrik-1-0-1 ibrik@1.0.1
+142 silly lockFile eeb5b243-ibrik-1-0-1 ibrik@1.0.1
+143 silly lockFile 8268bf66-ibrik-1-0-1 ibrik@~1.0.1
+144 silly lockFile 8268bf66-ibrik-1-0-1 ibrik@~1.0.1
+145 silly lockFile 0d8aeccf-istanbul-0-1-46 istanbul@0.1.46
+146 silly lockFile 0d8aeccf-istanbul-0-1-46 istanbul@0.1.46
+147 silly lockFile e6699f3e-istanbul-0-1-45 istanbul@~0.1.45
+148 silly lockFile e6699f3e-istanbul-0-1-45 istanbul@~0.1.45
+149 silly resolved [ { name: 'dateformat',
+149 silly resolved     description: 'A node.js package for Steven Levithan\'s excellent dateFormat() function.',
+149 silly resolved     maintainers: 'Felix Geisendörfer <felix@debuggable.com>',
+149 silly resolved     homepage: 'https://github.com/felixge/node-dateformat',
+149 silly resolved     author: { name: 'Steven Levithan' },
+149 silly resolved     contributors: [ [Object], [Object], [Object] ],
+149 silly resolved     version: '1.0.7-1.2.3',
+149 silly resolved     main: './lib/dateformat',
+149 silly resolved     dependencies: {},
+149 silly resolved     devDependencies: {},
+149 silly resolved     engines: { node: '*' },
+149 silly resolved     repository:
+149 silly resolved      { type: 'git',
+149 silly resolved        url: 'https://github.com/felixge/node-dateformat.git' },
+149 silly resolved     readme: '# dateformat\n\nA node.js package for Steven Levithan\'s excellent [dateFormat()][dateformat] function.\n\n## Modifications\n\n* Removed the `Date.prototype.format` method. Sorry folks, but extending native prototypes is for suckers.\n* Added a `module.exports = dateFormat;` statement at the bottom\n* Added the placeholder `N` to get the ISO 8601 numeric representation of the day of the week\n\n## Installation\n\n```bash\n$ npm install dateformat\n```\n\n## Usage\n\nAs taken from Steven\'s post, modified to match the Modifications listed above:\n```js\n    var dateFormat = require(\'dateformat\');\n    var now = new Date();\n\n    // Basic usage\n    dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");\n    // Saturday, June 9th, 2007, 5:46:21 PM\n\n    // You can use one of several named masks\n    dateFormat(now, "isoDateTime");\n    // 2007-06-09T17:46:21\n\n    // ...Or add your own\n    dateFormat.masks.hammerTime = \'HH:MM! "Can\\\'t touch this!"\';\n    dateFormat(now, "hammerTime");\n    // 17:46! Can\'t touch this!\n\n    // When using the standalone dateFormat function,\n    // you can also provide the date as a string\n    dateFormat("Jun 9 2007", "fullDate");\n    // Saturday, June 9, 2007\n\n    // Note that if you don\'t include the mask argument,\n    // dateFormat.masks.default is used\n    dateFormat(now);\n    // Sat Jun 09 2007 17:46:21\n\n    // And if you don\'t include the date argument,\n    // the current date and time is used\n    dateFormat();\n    // Sat Jun 09 2007 17:46:22\n\n    // You can also skip the date argument (as long as your mask doesn\'t\n    // contain any numbers), in which case the current date/time is used\n    dateFormat("longTime");\n    // 5:46:22 PM EST\n\n    // And finally, you can convert local time to UTC time. Simply pass in\n    // true as an additional argument (no argument skipping allowed in this case):\n    dateFormat(now, "longTime", true);\n    // 10:46:21 PM UTC\n\n    // ...Or add the prefix "UTC:" or "GMT:" to your mask.\n    dateFormat(now, "UTC:h:MM:ss TT Z");\n    // 10:46:21 PM UTC\n\n    // You can also get the ISO 8601 week of the year:\n    dateFormat(now, "W");\n    // 42\n\n    // and also get the ISO 8601 numeric representation of the day of the week:\n    dateFormat(now,"N");\n    // 6\n```\n## License\n\n(c) 2007-2009 Steven Levithan [stevenlevithan.com][stevenlevithan], MIT license.\n\n[dateformat]: http://blog.stevenlevithan.com/archives/date-time-format\n[stevenlevithan]: http://stevenlevithan.com/\n',
+149 silly resolved     readmeFilename: 'Readme.md',
+149 silly resolved     bugs: { url: 'https://github.com/felixge/node-dateformat/issues' },
+149 silly resolved     _id: 'dateformat@1.0.7-1.2.3',
+149 silly resolved     _from: 'dateformat@~1.0.6' },
+149 silly resolved   { name: 'ibrik',
+149 silly resolved     description: 'CoffeeScript coverage tool',
+149 silly resolved     homepage: 'https://github.com/Constellation/ibrik',
+149 silly resolved     main: './lib/ibrik',
+149 silly resolved     directories: { lib: './lib', tools: './tools' },
+149 silly resolved     bin: { ibrik: './bin/ibrik' },
+149 silly resolved     version: '1.0.1',
+149 silly resolved     engines: { node: '>=0.4.0' },
+149 silly resolved     maintainers: [ [Object] ],
+149 silly resolved     repository: { type: 'git', url: 'git://github.com/Constellation/ibrik.git' },
+149 silly resolved     dependencies:
+149 silly resolved      { 'coffee-script-redux': 'git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3',
+149 silly resolved        istanbul: '*',
+149 silly resolved        optimist: '*',
+149 silly resolved        escodegen: '*',
+149 silly resolved        mkdirp: '*',
+149 silly resolved        which: '*',
+149 silly resolved        estraverse: '*' },
+149 silly resolved     devDependencies: { mocha: '*', chai: '*' },
+149 silly resolved     licenses: [ [Object] ],
+149 silly resolved     scripts: { test: 'mocha', build: 'make build', watch: 'make watch' },
+149 silly resolved     readme: '## Ibrik - CoffeeScript meets Istanbul\n\nIbrik ([ibrik](http://github.com/Constellation/ibrik)) is\ncode coverage tool for CoffeeScript.\nIt uses [istanbul](https://github.com/gotwarlost/istanbul) and [CoffeeScriptRedux compiler](https://github.com/michaelficarra/CoffeeScriptRedux). Internally, it uses Mozilla JS AST as its IR.\n\n\n### Install\n\nibrik can be used in in a Node.js application via the package manager:\n\n    npm install -g ibrik\n\n\n### Usage\n\nlike this\n```sh\nibrik cover script.coffee\nistanbul report html\nopen coverage/index.html\n```\n\n### License\n\nCopyright (C) 2012 [Yusuke Suzuki](http://github.com/Constellation)\n (twitter: [@Constellation](http://twitter.com/Constellation)) and other contributors.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n  * Redistributions of source code must retain the above copyright\n    notice, this list of conditions and the following disclaimer.\n\n  * Redistributions in binary form must reproduce the above copyright\n    notice, this list of conditions and the following disclaimer in the\n    documentation and/or other materials provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\nARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY\nDIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\nLOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\nON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF\nTHIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n### Status\n\n[![Build Status](https://secure.travis-ci.org/Constellation/ibrik.png)](http://travis-ci.org/Constellation/ibrik)\n',
+149 silly resolved     readmeFilename: 'README.md',
+149 silly resolved     bugs: { url: 'https://github.com/Constellation/ibrik/issues' },
+149 silly resolved     _id: 'ibrik@1.0.1',
+149 silly resolved     _from: 'ibrik@~1.0.1' },
+149 silly resolved   { name: 'istanbul',
+149 silly resolved     version: '0.1.46',
+149 silly resolved     description: 'Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests and browser tests. Built for scale',
+149 silly resolved     keywords: [ 'coverage', 'code coverage', 'JS code coverage', 'JS coverage' ],
+149 silly resolved     author:
+149 silly resolved      { name: 'Krishnan Anantheswaran',
+149 silly resolved        email: 'kananthmail-github@yahoo.com' },
+149 silly resolved     contributors:
+149 silly resolved      [ [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object],
+149 silly resolved        [Object] ],
+149 silly resolved     preferGlobal: true,
+149 silly resolved     scripts:
+149 silly resolved      { pretest: 'jshint --config ./node_modules/yui-lint/jshint.json lib/*js lib/command/*js lib/report/*js lib/store/*js lib/util/*js test/*js test/instrumentation/*js test/cli/*js test/other/*js',
+149 silly resolved        test: 'test/run.js',
+149 silly resolved        posttest: 'node ./lib/cli.js check-coverage --statements 95 --branches 80',
+149 silly resolved        docs: 'npm install yuidocjs && node node_modules/yuidocjs/lib/cli.js .' },
+149 silly resolved     bin: { istanbul: './lib/cli.js' },
+149 silly resolved     repository: { type: 'git', url: 'git://github.com/gotwarlost/istanbul.git' },
+149 silly resolved     dependencies:
+149 silly resolved      { esprima: '1.0.x',
+149 silly resolved        escodegen: '0.0.23',
+149 silly resolved        handlebars: '1.0.x',
+149 silly resolved        mkdirp: '0.3.x',
+149 silly resolved        nopt: '2.1.x',
+149 silly resolved        fileset: '0.1.x',
+149 silly resolved        which: '1.0.x',
+149 silly resolved        async: '0.2.x',
+149 silly resolved        abbrev: '1.0.x',
+149 silly resolved        wordwrap: '0.0.x',
+149 silly resolved        resolve: '0.5.x' },
+149 silly resolved     devDependencies:
+149 silly resolved      { rimraf: '*',
+149 silly resolved        nodeunit: '*',
+149 silly resolved        jshint: '*',
+149 silly resolved        'yui-lint': '*',
+149 silly resolved        requirejs: '2.x' },
+149 silly resolved     readme: 'Istanbul - a JS code coverage tool written in JS\n================================================\n\n[![Build Status](https://secure.travis-ci.org/gotwarlost/istanbul.png)](http://travis-ci.org/gotwarlost/istanbul)\n[![Dependency Status](https://gemnasium.com/gotwarlost/istanbul.png)](https://gemnasium.com/gotwarlost/istanbul)\n\n[![NPM](https://nodei.co/npm/istanbul.png?downloads=true)](https://nodei.co/npm/istanbul/) \n\nFeatures\n--------\n\n* All-javascript instrumentation library that tracks **statement, branch,\nand function coverage** and reverse-engineers **line coverage** with 100% fidelity.\n* **Module loader hooks** to instrument code on the fly\n* **Command line tools** to run node unit tests "with coverage turned on" and no cooperation\nwhatsoever from the test runner\n* **HTML** and **LCOV** reporting.\n* Ability to use as **middleware** when serving JS files that need to be tested on the browser.\n* Can be used on the **command line** as well as a **library**\n* Based on the awesome `esprima` parser and the equally awesome `escodegen` code generator\n* Well-tested on node 0.4.x, 0.6.x, 0.8.x and the browser (instrumentation library only)\n\nInstalling\n----------\n\n    $ npm install -g istanbul\n\nGetting started\n---------------\n\nThe best way to see it in action is to run node unit tests. Say you have a test\nscript `test.js` that runs all tests for your node project without coverage.\n\nSimply:\n\n    $ cd /path/to/your/source/root\n    $ istanbul cover test.js\n\nand this should produce a `coverage.json`, `lcov.info` and `lcov-report/*html` under `./coverage`\n\nSample of code coverage reports produced by this tool (for this tool!):\n\n* [HTML reports](http://gotwarlost.github.com/istanbul/public/coverage/lcov-report/index.html)\n* [Standard LCOV reports](http://gotwarlost.github.com/istanbul/public/coverage/std-lcov/index.html) (using `genhtml` on the lcov trace file)\n\nUse cases\n---------\n\nSupports the following use cases and more\n\n* transparent coverage of nodejs unit tests\n* ability to use in an <code>npm test</code> script for conditional coverage\n* instrumentation of files in batch mode for browser tests (using yeti for example)\n* Server side code coverage for nodejs by embedding it as custom middleware\n\n\nThe command line\n----------------\n\n    $ istanbul help\n\ngives you detailed help on all commands.\n\nUsage: istanbul help <command>\n\nAvailable commands are:\n\n      check-coverage\n              checks overall coverage against thresholds from coverage JSON\n              files. Exits 1 if thresholds are not met, 0 otherwise\n\n\n      cover   transparently adds coverage information to a node command. Saves\n              coverage.json and reports at the end of execution\n\n\n      help    shows help\n\n\n      instrument\n              instruments a file or a directory tree and writes the\n              instrumented code to the desired output location\n\n\n      report  writes reports for coverage JSON objects produced in a previous\n              run\n\n\n      test    cover a node command only when npm_config_coverage is set. Use in\n              an `npm test` script for conditional coverage\n\n\nCommand names can be abbreviated as long as the abbreviation is unambiguous\n\nThe `cover` command\n-------------------\n\n    $ istanbul cover my-test-script.js -- my test args\n    # note the -- between the command name and the arguments to be passed\n\nThe `cover` command can be used to get a coverage object and reports for any arbitrary\nnode script. By default, coverage information is written under `./coverage` - this\ncan be changed using command-line options.\n\nThe `test` command\n-------------------\n\nThe `test` command has almost the same behavior as the `cover` command, except that\nit skips coverage unless the `npm_config_coverage` environment variable is set.\n\nThis helps you set up conditional coverage for tests. In this case you would\nhave a `package.json` that looks as follows.\n\n    {\n        "name": "my-awesome-lib",\n        "version": "1.0",\n        "script": {\n            "test": "istanbul test my-test-file.js"\n        }\n    }\n\nThen:\n\n    $ npm test # will run tests without coverage\n\nAnd:\n\n    $ npm test --coverage # will run tests with coverage\n\n**Note**: This needs `node 0.6` or better to work. `npm` for `node 0.4.x` does\nnot support the `--coverage` flag.\n\nThe `instrument` command\n------------------------\n\nInstruments a single JS file or an entire directory tree and produces an output directory tree with instrumented code. This should not be required for running node unit tests but is useful for tests to be run on the browser (using `yeti` for example).\n\nThe `report` command\n-------------------\n\nWrites reports using `coverage*.json` files as the source of coverage information. Reports are available in the following formats:\n\n* html - produces a bunch of HTML files with annotated source code\n* lcovonly - produces an lcov.info file\n* lcov - produces html + lcov files. This is the default format\n* cobertura - produces a cobertura-coverage.xml file for easy Hudson integration\n* text-summary - produces a compact text summary of coverage, typically to console\n* text - produces a detailed text table with coverage for all files\n* teamcity - produces service messages to report code coverage to TeamCity\n\nAdditional report formats may be plugged in at the library level.\n\nLibrary usage\n-------------\n\nAll the features of istanbul can be accessed as a library using its [public API](http://gotwarlost.github.com/istanbul/public/apidocs/index.html)\n\nChangelog\n---------\n\nChangelog has been moved [here](https://github.com/gotwarlost/istanbul/blob/master/CHANGELOG.md).\n\nLicense\n-------\n\nistanbul is licensed under the [BSD License](http://github.com/gotwarlost/istanbul/raw/master/LICENSE).\n\nThird-party libraries\n---------------------\n\nThe following third-party libraries are used by this module:\n\n* abbrev: https://github.com/isaacs/abbrev-js -  to handle command abbreviations\n* async: https://github.com/caolan/async - for parallel instrumentation of files\n* escodegen: https://github.com/Constellation/escodegen - for JS code generation\n* esprima: https://github.com/ariya/esprima - for JS parsing\n* fileset: https://github.com/mklabs/node-fileset - for loading and matching path expressions\n* handlebars: https://github.com/wycats/handlebars.js/ - for report template expansion\n* mkdirp: https://github.com/substack/node-mkdirp - to create output directories\n* nodeunit: https://github.com/caolan/nodeunit - dev dependency for unit tests\n* nopt: https://github.com/isaacs/nopt - for option parsing\n* resolve: https://github.com/substack/node-resolve - for resolving a post-require hook module name into its main file.\n* rimraf - https://github.com/isaacs/rimraf - dev dependency for unit tests\n* which: https://github.com/isaacs/node-which - to resolve a node command to a file for the `cover` command\n* wordwrap: https://github.com/substack/node-wordwrap - for prettier help\n* prettify: http://code.google.com/p/google-code-prettify/ - for syntax colored HTML reports. Files checked in under `lib/vendor/`\n\nInspired by\n-----------\n\n* YUI test coverage - https://github.com/yui/yuitest - the grand-daddy of JS coverage tools. Istanbul has been specifically designed to offer an alternative to this library with an easy migration path.\n* cover: https://github.com/itay/node-cover - the inspiration for the `cover` command, modeled after the `run` command in that tool. The coverage methodology used by istanbul is quite different, however\n\nShout out to\n------------\n\n   * [mfncooper](https://github.com/mfncooper) - for great brainstorming discussions\n   * [reid](https://github.com/reid), [davglass](https://github.com/davglass), the YUI dudes, for interesting conversations, encouragement, support and gentle pressure to get it done :)\n\nWhy the funky name?\n-------------------\n\nSince all the good ones are taken. Comes from the loose association of ideas across coverage, carpet-area coverage, the country that makes good carpets and so on...\n\n\n',
+149 silly resolved     readmeFilename: 'README.md',
+149 silly resolved     bugs: { url: 'https://github.com/gotwarlost/istanbul/issues' },
+149 silly resolved     homepage: 'https://github.com/gotwarlost/istanbul',
+149 silly resolved     _id: 'istanbul@0.1.46',
+149 silly resolved     _from: 'istanbul@~0.1.45' } ]
+150 info install dateformat@1.0.7-1.2.3 into C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage
+151 info install ibrik@1.0.1 into C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage
+152 info install istanbul@0.1.46 into C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage
+153 info installOne dateformat@1.0.7-1.2.3
+154 info installOne ibrik@1.0.1
+155 info installOne istanbul@0.1.46
+156 info C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\dateformat unbuild
+157 info C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\ibrik unbuild
+158 info C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\istanbul unbuild
+159 verbose tar unpack C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\dateformat\1.0.7-1.2.3\package.tgz
+160 silly lockFile 75324c65-coverage-node-modules-dateformat tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\dateformat
+161 verbose lock tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\dateformat C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\75324c65-coverage-node-modules-dateformat.lock
+162 silly lockFile a4523620-teformat-1-0-7-1-2-3-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\dateformat\1.0.7-1.2.3\package.tgz
+163 verbose lock tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\dateformat\1.0.7-1.2.3\package.tgz C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\a4523620-teformat-1-0-7-1-2-3-package-tgz.lock
+164 verbose tar unpack C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\ibrik\1.0.1\package.tgz
+165 silly lockFile 9a63f220-arma-coverage-node-modules-ibrik tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\ibrik
+166 verbose lock tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\ibrik C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\9a63f220-arma-coverage-node-modules-ibrik.lock
+167 silly lockFile 93d8db49-pm-cache-ibrik-1-0-1-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\ibrik\1.0.1\package.tgz
+168 verbose lock tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\ibrik\1.0.1\package.tgz C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\93d8db49-pm-cache-ibrik-1-0-1-package-tgz.lock
+169 verbose tar unpack C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\istanbul\0.1.46\package.tgz
+170 silly lockFile b80f822b-a-coverage-node-modules-istanbul tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\istanbul
+171 verbose lock tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\istanbul C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\b80f822b-a-coverage-node-modules-istanbul.lock
+172 silly lockFile 0084e111-ache-istanbul-0-1-46-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\istanbul\0.1.46\package.tgz
+173 verbose lock tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\istanbul\0.1.46\package.tgz C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\0084e111-ache-istanbul-0-1-46-package-tgz.lock
+174 silly gunzTarPerm modes [ '755', '644' ]
+175 silly gunzTarPerm modes [ '755', '644' ]
+176 silly gunzTarPerm modes [ '755', '644' ]
+177 silly gunzTarPerm extractEntry package.json
+178 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+179 silly gunzTarPerm extractEntry package.json
+180 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+181 silly gunzTarPerm extractEntry package.json
+182 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+183 silly gunzTarPerm extractEntry LICENSE
+184 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+185 silly gunzTarPerm extractEntry lib/dateformat.js
+186 silly gunzTarPerm modified mode [ 'lib/dateformat.js', 438, 420 ]
+187 silly gunzTarPerm extractEntry README.md
+188 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+189 silly gunzTarPerm extractEntry bin/ibrik
+190 silly gunzTarPerm modified mode [ 'bin/ibrik', 438, 420 ]
+191 silly gunzTarPerm extractEntry README.md
+192 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+193 silly gunzTarPerm extractEntry LICENSE
+194 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+195 silly gunzTarPerm extractEntry Readme.md
+196 silly gunzTarPerm modified mode [ 'Readme.md', 438, 420 ]
+197 silly gunzTarPerm extractEntry test/basic.js
+198 silly gunzTarPerm modified mode [ 'test/basic.js', 438, 420 ]
+199 silly gunzTarPerm extractEntry lib/command.js
+200 silly gunzTarPerm modified mode [ 'lib/command.js', 438, 420 ]
+201 silly gunzTarPerm extractEntry lib/cover.js
+202 silly gunzTarPerm modified mode [ 'lib/cover.js', 438, 420 ]
+203 silly gunzTarPerm extractEntry index.js
+204 silly gunzTarPerm modified mode [ 'index.js', 438, 420 ]
+205 silly gunzTarPerm extractEntry CHANGELOG.md
+206 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 438, 420 ]
+207 silly gunzTarPerm extractEntry test/test_dayofweek.js
+208 silly gunzTarPerm modified mode [ 'test/test_dayofweek.js', 438, 420 ]
+209 silly gunzTarPerm extractEntry test/test_weekofyear.js
+210 silly gunzTarPerm modified mode [ 'test/test_weekofyear.js', 438, 420 ]
+211 silly gunzTarPerm extractEntry test/test_weekofyear.sh
+212 silly gunzTarPerm modified mode [ 'test/test_weekofyear.sh', 438, 420 ]
+213 silly gunzTarPerm extractEntry lib/hook.js
+214 silly gunzTarPerm modified mode [ 'lib/hook.js', 438, 420 ]
+215 silly gunzTarPerm extractEntry lib/ibrik.js
+216 silly gunzTarPerm modified mode [ 'lib/ibrik.js', 438, 420 ]
+217 silly gunzTarPerm extractEntry lib/cli.js
+218 silly gunzTarPerm modified mode [ 'lib/cli.js', 438, 420 ]
+219 silly gunzTarPerm extractEntry lib/register-plugins.js
+220 silly gunzTarPerm modified mode [ 'lib/register-plugins.js', 438, 420 ]
+221 silly gunzTarPerm extractEntry lib/instrumenter.js
+222 silly gunzTarPerm modified mode [ 'lib/instrumenter.js', 438, 420 ]
+223 silly gunzTarPerm extractEntry lib/hook.js
+224 silly gunzTarPerm modified mode [ 'lib/hook.js', 438, 420 ]
+225 silly gunzTarPerm extractEntry lib/instrumenter.js
+226 silly gunzTarPerm modified mode [ 'lib/instrumenter.js', 438, 420 ]
+227 silly gunzTarPerm extractEntry lib/report.js
+228 silly gunzTarPerm modified mode [ 'lib/report.js', 438, 420 ]
+229 silly gunzTarPerm extractEntry LICENSE.BSD
+230 silly gunzTarPerm modified mode [ 'LICENSE.BSD', 438, 420 ]
+231 silly gunzTarPerm extractEntry lib/collector.js
+232 silly gunzTarPerm modified mode [ 'lib/collector.js', 438, 420 ]
+233 silly gunzTarPerm extractEntry lib/object-utils.js
+234 silly gunzTarPerm modified mode [ 'lib/object-utils.js', 438, 420 ]
+235 silly gunzTarPerm extractEntry Makefile
+236 silly gunzTarPerm modified mode [ 'Makefile', 438, 420 ]
+237 silly gunzTarPerm extractEntry tools/watch.coffee
+238 silly gunzTarPerm modified mode [ 'tools/watch.coffee', 438, 420 ]
+239 silly gunzTarPerm extractEntry lib/command/check-coverage.js
+240 silly gunzTarPerm modified mode [ 'lib/command/check-coverage.js', 438, 420 ]
+241 silly gunzTarPerm extractEntry lib/command/cover.js
+242 silly gunzTarPerm modified mode [ 'lib/command/cover.js', 438, 420 ]
+243 silly gunzTarPerm extractEntry lib/command/help.js
+244 silly gunzTarPerm modified mode [ 'lib/command/help.js', 438, 420 ]
+245 silly gunzTarPerm extractEntry lib/command/index.js
+246 silly gunzTarPerm modified mode [ 'lib/command/index.js', 438, 420 ]
+247 silly gunzTarPerm extractEntry lib/command/instrument.js
+248 silly gunzTarPerm modified mode [ 'lib/command/instrument.js', 438, 420 ]
+249 silly gunzTarPerm extractEntry lib/command/report.js
+250 silly gunzTarPerm modified mode [ 'lib/command/report.js', 438, 420 ]
+251 silly lockFile 75324c65-coverage-node-modules-dateformat tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\dateformat
+252 silly lockFile 75324c65-coverage-node-modules-dateformat tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\dateformat
+253 silly lockFile a4523620-teformat-1-0-7-1-2-3-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\dateformat\1.0.7-1.2.3\package.tgz
+254 silly lockFile a4523620-teformat-1-0-7-1-2-3-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\dateformat\1.0.7-1.2.3\package.tgz
+255 info preinstall dateformat@1.0.7-1.2.3
+256 verbose readDependencies using package.json deps
+257 verbose readDependencies using package.json deps
+258 silly resolved []
+259 verbose about to build C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\dateformat
+260 info build C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\dateformat
+261 verbose linkStuff [ false,
+261 verbose linkStuff   false,
+261 verbose linkStuff   false,
+261 verbose linkStuff   'C:\\Users\\io.352MEDIA\\Documents\\GitHub\\Mean\\node_modules\\karma-coverage\\node_modules' ]
+262 info linkStuff dateformat@1.0.7-1.2.3
+263 verbose linkBins dateformat@1.0.7-1.2.3
+264 verbose linkMans dateformat@1.0.7-1.2.3
+265 verbose rebuildBundles dateformat@1.0.7-1.2.3
+266 info install dateformat@1.0.7-1.2.3
+267 silly gunzTarPerm extractEntry lib/command/test.js
+268 silly gunzTarPerm modified mode [ 'lib/command/test.js', 438, 420 ]
+269 silly gunzTarPerm extractEntry lib/command/common/run-with-cover.js
+270 silly gunzTarPerm modified mode [ 'lib/command/common/run-with-cover.js', 438, 420 ]
+271 info postinstall dateformat@1.0.7-1.2.3
+272 silly gunzTarPerm extractEntry lib/report/cobertura.js
+273 silly gunzTarPerm modified mode [ 'lib/report/cobertura.js', 438, 420 ]
+274 silly gunzTarPerm extractEntry lib/report/index.js
+275 silly gunzTarPerm modified mode [ 'lib/report/index.js', 438, 420 ]
+276 silly gunzTarPerm extractEntry lib/report/json.js
+277 silly gunzTarPerm modified mode [ 'lib/report/json.js', 438, 420 ]
+278 silly gunzTarPerm extractEntry lib/report/lcov.js
+279 silly gunzTarPerm modified mode [ 'lib/report/lcov.js', 438, 420 ]
+280 silly lockFile 9a63f220-arma-coverage-node-modules-ibrik tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\ibrik
+281 silly lockFile 9a63f220-arma-coverage-node-modules-ibrik tar://C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\ibrik
+282 silly lockFile 93d8db49-pm-cache-ibrik-1-0-1-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\ibrik\1.0.1\package.tgz
+283 silly lockFile 93d8db49-pm-cache-ibrik-1-0-1-package-tgz tar://C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\ibrik\1.0.1\package.tgz
+284 info preinstall ibrik@1.0.1
+285 silly gunzTarPerm extractEntry lib/report/html.js
+286 silly gunzTarPerm modified mode [ 'lib/report/html.js', 438, 420 ]
+287 silly gunzTarPerm extractEntry lib/report/none.js
+288 silly gunzTarPerm modified mode [ 'lib/report/none.js', 438, 420 ]
+289 verbose readDependencies using package.json deps
+290 verbose readDependencies using package.json deps
+291 silly gunzTarPerm extractEntry lib/report/teamcity.js
+292 silly gunzTarPerm modified mode [ 'lib/report/teamcity.js', 438, 420 ]
+293 silly gunzTarPerm extractEntry lib/report/text-summary.js
+294 silly gunzTarPerm modified mode [ 'lib/report/text-summary.js', 438, 420 ]
+295 silly gunzTarPerm extractEntry lib/report/text.js
+296 silly gunzTarPerm modified mode [ 'lib/report/text.js', 438, 420 ]
+297 silly gunzTarPerm extractEntry lib/report/lcovonly.js
+298 silly gunzTarPerm modified mode [ 'lib/report/lcovonly.js', 438, 420 ]
+299 silly gunzTarPerm extractEntry lib/report/templates/foot.txt
+300 silly gunzTarPerm modified mode [ 'lib/report/templates/foot.txt', 438, 420 ]
+301 silly gunzTarPerm extractEntry lib/report/templates/head.txt
+302 silly gunzTarPerm modified mode [ 'lib/report/templates/head.txt', 438, 420 ]
+303 silly gunzTarPerm extractEntry lib/store/fslookup.js
+304 silly gunzTarPerm modified mode [ 'lib/store/fslookup.js', 438, 420 ]
+305 silly gunzTarPerm extractEntry lib/store/index.js
+306 silly gunzTarPerm modified mode [ 'lib/store/index.js', 438, 420 ]
+307 silly gunzTarPerm extractEntry lib/store/memory.js
+308 silly gunzTarPerm modified mode [ 'lib/store/memory.js', 438, 420 ]
+309 silly gunzTarPerm extractEntry lib/store/tmp.js
+310 silly gunzTarPerm modified mode [ 'lib/store/tmp.js', 438, 420 ]
+311 silly gunzTarPerm extractEntry lib/util/factory.js
+312 silly gunzTarPerm modified mode [ 'lib/util/factory.js', 438, 420 ]
+313 silly gunzTarPerm extractEntry lib/util/file-writer.js
+314 silly gunzTarPerm modified mode [ 'lib/util/file-writer.js', 438, 420 ]
+315 verbose cache add [ 'coffee-script-redux@git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3',
+315 verbose cache add   null ]
+316 verbose cache add name=undefined spec="coffee-script-redux@git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3" args=["coffee-script-redux@git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3",null]
+317 verbose parsed url { protocol: null,
+317 verbose parsed url   slashes: null,
+317 verbose parsed url   auth: null,
+317 verbose parsed url   host: null,
+317 verbose parsed url   port: null,
+317 verbose parsed url   hostname: null,
+317 verbose parsed url   hash: '#9895cd1641fdf3a2424e662ab7583726bb0e35b3',
+317 verbose parsed url   search: null,
+317 verbose parsed url   query: null,
+317 verbose parsed url   pathname: 'coffee-script-redux@git+https://github.com/michaelficarra/CoffeeScriptRedux.git',
+317 verbose parsed url   path: 'coffee-script-redux@git+https://github.com/michaelficarra/CoffeeScriptRedux.git',
+317 verbose parsed url   href: 'coffee-script-redux@git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3' }
+318 verbose cache add name="coffee-script-redux" spec="git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3" args=["coffee-script-redux","git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3"]
+319 verbose parsed url { protocol: 'git+https:',
+319 verbose parsed url   slashes: true,
+319 verbose parsed url   auth: null,
+319 verbose parsed url   host: 'github.com',
+319 verbose parsed url   port: null,
+319 verbose parsed url   hostname: 'github.com',
+319 verbose parsed url   hash: '#9895cd1641fdf3a2424e662ab7583726bb0e35b3',
+319 verbose parsed url   search: null,
+319 verbose parsed url   query: null,
+319 verbose parsed url   pathname: '/michaelficarra/CoffeeScriptRedux.git',
+319 verbose parsed url   path: '/michaelficarra/CoffeeScriptRedux.git',
+319 verbose parsed url   href: 'git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3' }
+320 silly lockFile d3428e98-41fdf3a2424e662ab7583726bb0e35b3 git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3
+321 verbose lock git+https://github.com/michaelficarra/CoffeeScriptRedux.git#9895cd1641fdf3a2424e662ab7583726bb0e35b3 C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\d3428e98-41fdf3a2424e662ab7583726bb0e35b3.lock
+322 verbose cache add [ 'optimist@*', null ]
+323 verbose cache add name=undefined spec="optimist@*" args=["optimist@*",null]
+324 verbose parsed url { protocol: null,
+324 verbose parsed url   slashes: null,
+324 verbose parsed url   auth: null,
+324 verbose parsed url   host: null,
+324 verbose parsed url   port: null,
+324 verbose parsed url   hostname: null,
+324 verbose parsed url   hash: null,
+324 verbose parsed url   search: null,
+324 verbose parsed url   query: null,
+324 verbose parsed url   pathname: 'optimist@*',
+324 verbose parsed url   path: 'optimist@*',
+324 verbose parsed url   href: 'optimist@*' }
+325 verbose cache add name="optimist" spec="*" args=["optimist","*"]
+326 verbose parsed url { protocol: null,
+326 verbose parsed url   slashes: null,
+326 verbose parsed url   auth: null,
+326 verbose parsed url   host: null,
+326 verbose parsed url   port: null,
+326 verbose parsed url   hostname: null,
+326 verbose parsed url   hash: null,
+326 verbose parsed url   search: null,
+326 verbose parsed url   query: null,
+326 verbose parsed url   pathname: '*',
+326 verbose parsed url   path: '*',
+326 verbose parsed url   href: '*' }
+327 verbose addNamed [ 'optimist', '*' ]
+328 verbose addNamed [ null, '*' ]
+329 silly lockFile 942cd351-optimist optimist@*
+330 verbose lock optimist@* C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\942cd351-optimist.lock
+331 verbose cache add [ 'escodegen@*', null ]
+332 verbose cache add name=undefined spec="escodegen@*" args=["escodegen@*",null]
+333 verbose parsed url { protocol: null,
+333 verbose parsed url   slashes: null,
+333 verbose parsed url   auth: null,
+333 verbose parsed url   host: null,
+333 verbose parsed url   port: null,
+333 verbose parsed url   hostname: null,
+333 verbose parsed url   hash: null,
+333 verbose parsed url   search: null,
+333 verbose parsed url   query: null,
+333 verbose parsed url   pathname: 'escodegen@*',
+333 verbose parsed url   path: 'escodegen@*',
+333 verbose parsed url   href: 'escodegen@*' }
+334 verbose cache add name="escodegen" spec="*" args=["escodegen","*"]
+335 verbose parsed url { protocol: null,
+335 verbose parsed url   slashes: null,
+335 verbose parsed url   auth: null,
+335 verbose parsed url   host: null,
+335 verbose parsed url   port: null,
+335 verbose parsed url   hostname: null,
+335 verbose parsed url   hash: null,
+335 verbose parsed url   search: null,
+335 verbose parsed url   query: null,
+335 verbose parsed url   pathname: '*',
+335 verbose parsed url   path: '*',
+335 verbose parsed url   href: '*' }
+336 verbose addNamed [ 'escodegen', '*' ]
+337 verbose addNamed [ null, '*' ]
+338 silly lockFile 597aae0b-escodegen escodegen@*
+339 verbose lock escodegen@* C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\597aae0b-escodegen.lock
+340 verbose cache add [ 'mkdirp@*', null ]
+341 verbose cache add name=undefined spec="mkdirp@*" args=["mkdirp@*",null]
+342 verbose parsed url { protocol: null,
+342 verbose parsed url   slashes: null,
+342 verbose parsed url   auth: null,
+342 verbose parsed url   host: null,
+342 verbose parsed url   port: null,
+342 verbose parsed url   hostname: null,
+342 verbose parsed url   hash: null,
+342 verbose parsed url   search: null,
+342 verbose parsed url   query: null,
+342 verbose parsed url   pathname: 'mkdirp@*',
+342 verbose parsed url   path: 'mkdirp@*',
+342 verbose parsed url   href: 'mkdirp@*' }
+343 verbose cache add name="mkdirp" spec="*" args=["mkdirp","*"]
+344 verbose parsed url { protocol: null,
+344 verbose parsed url   slashes: null,
+344 verbose parsed url   auth: null,
+344 verbose parsed url   host: null,
+344 verbose parsed url   port: null,
+344 verbose parsed url   hostname: null,
+344 verbose parsed url   hash: null,
+344 verbose parsed url   search: null,
+344 verbose parsed url   query: null,
+344 verbose parsed url   pathname: '*',
+344 verbose parsed url   path: '*',
+344 verbose parsed url   href: '*' }
+345 verbose addNamed [ 'mkdirp', '*' ]
+346 verbose addNamed [ null, '*' ]
+347 silly lockFile 49c57f5b-mkdirp mkdirp@*
+348 verbose lock mkdirp@* C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\49c57f5b-mkdirp.lock
+349 verbose cache add [ 'which@*', null ]
+350 verbose cache add name=undefined spec="which@*" args=["which@*",null]
+351 verbose parsed url { protocol: null,
+351 verbose parsed url   slashes: null,
+351 verbose parsed url   auth: null,
+351 verbose parsed url   host: null,
+351 verbose parsed url   port: null,
+351 verbose parsed url   hostname: null,
+351 verbose parsed url   hash: null,
+351 verbose parsed url   search: null,
+351 verbose parsed url   query: null,
+351 verbose parsed url   pathname: 'which@*',
+351 verbose parsed url   path: 'which@*',
+351 verbose parsed url   href: 'which@*' }
+352 verbose cache add name="which" spec="*" args=["which","*"]
+353 verbose parsed url { protocol: null,
+353 verbose parsed url   slashes: null,
+353 verbose parsed url   auth: null,
+353 verbose parsed url   host: null,
+353 verbose parsed url   port: null,
+353 verbose parsed url   hostname: null,
+353 verbose parsed url   hash: null,
+353 verbose parsed url   search: null,
+353 verbose parsed url   query: null,
+353 verbose parsed url   pathname: '*',
+353 verbose parsed url   path: '*',
+353 verbose parsed url   href: '*' }
+354 verbose addNamed [ 'which', '*' ]
+355 verbose addNamed [ null, '*' ]
+356 silly lockFile a275e88c-which which@*
+357 verbose lock which@* C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\a275e88c-which.lock
+358 verbose cache add [ 'estraverse@*', null ]
+359 verbose cache add name=undefined spec="estraverse@*" args=["estraverse@*",null]
+360 verbose parsed url { protocol: null,
+360 verbose parsed url   slashes: null,
+360 verbose parsed url   auth: null,
+360 verbose parsed url   host: null,
+360 verbose parsed url   port: null,
+360 verbose parsed url   hostname: null,
+360 verbose parsed url   hash: null,
+360 verbose parsed url   search: null,
+360 verbose parsed url   query: null,
+360 verbose parsed url   pathname: 'estraverse@*',
+360 verbose parsed url   path: 'estraverse@*',
+360 verbose parsed url   href: 'estraverse@*' }
+361 verbose cache add name="estraverse" spec="*" args=["estraverse","*"]
+362 verbose parsed url { protocol: null,
+362 verbose parsed url   slashes: null,
+362 verbose parsed url   auth: null,
+362 verbose parsed url   host: null,
+362 verbose parsed url   port: null,
+362 verbose parsed url   hostname: null,
+362 verbose parsed url   hash: null,
+362 verbose parsed url   search: null,
+362 verbose parsed url   query: null,
+362 verbose parsed url   pathname: '*',
+362 verbose parsed url   path: '*',
+362 verbose parsed url   href: '*' }
+363 verbose addNamed [ 'estraverse', '*' ]
+364 verbose addNamed [ null, '*' ]
+365 silly lockFile 771f3482-estraverse estraverse@*
+366 verbose lock estraverse@* C:\Users\io.352MEDIA\AppData\Roaming\npm-cache\771f3482-estraverse.lock
+367 silly addNameRange { name: 'optimist', range: '*', hasData: false }
+368 silly addNameRange { name: 'escodegen', range: '*', hasData: false }
+369 silly addNameRange { name: 'mkdirp', range: '*', hasData: false }
+370 silly addNameRange { name: 'estraverse', range: '*', hasData: false }
+371 silly addNameRange { name: 'which', range: '*', hasData: false }
+372 silly gunzTarPerm extractEntry lib/util/flow-control.js
+373 silly gunzTarPerm modified mode [ 'lib/util/flow-control.js', 438, 420 ]
+374 silly gunzTarPerm extractEntry lib/util/help-formatter.js
+375 silly gunzTarPerm modified mode [ 'lib/util/help-formatter.js', 438, 420 ]
+376 verbose addRemoteGit [ 'https://github.com/michaelficarra/CoffeeScriptRedux.git',
+376 verbose addRemoteGit   '9895cd1641fdf3a2424e662ab7583726bb0e35b3' ]
+377 verbose url raw mkdirp
+378 verbose url resolving [ 'https://registry.npmjs.org/', './mkdirp' ]
+379 verbose url resolved https://registry.npmjs.org/mkdirp
+380 info trying registry request attempt 1 at 13:01:16
+381 verbose etag "K8OZFR8VZEGCCIFOQPMEO5DH"
+382 http GET https://registry.npmjs.org/mkdirp
+383 verbose url raw estraverse
+384 verbose url resolving [ 'https://registry.npmjs.org/', './estraverse' ]
+385 verbose url resolved https://registry.npmjs.org/estraverse
+386 info trying registry request attempt 1 at 13:01:16
+387 verbose etag "5RCJ7LHE20BD2LF6NLEDZWMRN"
+388 http GET https://registry.npmjs.org/estraverse
+389 verbose url raw escodegen
+390 verbose url resolving [ 'https://registry.npmjs.org/', './escodegen' ]
+391 verbose url resolved https://registry.npmjs.org/escodegen
+392 info trying registry request attempt 1 at 13:01:16
+393 verbose etag "9OKKXRSPS437JRMCRNLO05PSV"
+394 http GET https://registry.npmjs.org/escodegen
+395 verbose url raw which
+396 verbose url resolving [ 'https://registry.npmjs.org/', './which' ]
+397 verbose url resolved https://registry.npmjs.org/which
+398 info trying registry request attempt 1 at 13:01:16
+399 verbose etag "F48GKV8LEGPI5GX8XAFMTNUCH"
+400 http GET https://registry.npmjs.org/which
+401 verbose url raw optimist
+402 verbose url resolving [ 'https://registry.npmjs.org/', './optimist' ]
+403 verbose url resolved https://registry.npmjs.org/optimist
+404 info trying registry request attempt 1 at 13:01:16
+405 verbose etag "5QIFGPCCEIULI1X3R830J0ISP"
+406 http GET https://registry.npmjs.org/optimist
+407 silly gunzTarPerm extractEntry lib/util/file-matcher.js
+408 silly gunzTarPerm modified mode [ 'lib/util/file-matcher.js', 438, 420 ]
+409 silly gunzTarPerm extractEntry lib/util/insertion-text.js
+410 silly gunzTarPerm modified mode [ 'lib/util/insertion-text.js', 438, 420 ]
+411 silly gunzTarPerm extractEntry lib/util/meta.js
+412 silly gunzTarPerm modified mode [ 'lib/util/meta.js', 438, 420 ]
+413 silly gunzTarPerm extractEntry lib/util/tree-summarizer.js
+414 silly gunzTarPerm modified mode [ 'lib/util/tree-summarizer.js', 438, 420 ]
+415 silly gunzTarPerm extractEntry lib/util/writer.js
+416 silly gunzTarPerm modified mode [ 'lib/util/writer.js', 438, 420 ]
+417 silly gunzTarPerm extractEntry lib/util/yui-load-hook.js
+418 silly gunzTarPerm modified mode [ 'lib/util/yui-load-hook.js', 438, 420 ]
+419 silly gunzTarPerm extractEntry lib/util/input-error.js
+420 silly gunzTarPerm modified mode [ 'lib/util/input-error.js', 438, 420 ]
+421 silly gunzTarPerm extractEntry lib/vendor/prettify.js
+422 silly gunzTarPerm modified mode [ 'lib/vendor/prettify.js', 438, 420 ]
+423 silly lockFile 0413540b-aelficarra-CoffeeScriptRedux-git https://github.com/michaelficarra/CoffeeScriptRedux.git
+424 verbose about to build C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\ibrik
+425 info C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\ibrik unbuild
+426 info preuninstall ibrik@1.0.1
+427 info uninstall ibrik@1.0.1
+428 verbose false,C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules,C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules unbuild ibrik@1.0.1
+429 verbose C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\.bin,[object Object] binRoot
+430 info postuninstall ibrik@1.0.1
+431 silly gunzTarPerm extractEntry lib/vendor/prettify.css
+432 silly gunzTarPerm modified mode [ 'lib/vendor/prettify.css', 438, 420 ]
+433 silly gunzTarPerm extractEntry test/cli-helper.js
+434 silly gunzTarPerm modified mode [ 'test/cli-helper.js', 438, 420 ]
+435 silly gunzTarPerm extractEntry test/common.js
+436 silly gunzTarPerm modified mode [ 'test/common.js', 438, 420 ]
+437 silly gunzTarPerm extractEntry test/helper.js
+438 silly gunzTarPerm modified mode [ 'test/helper.js', 438, 420 ]
+439 verbose about to build C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage
+440 info C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage unbuild
+441 info preuninstall karma-coverage@0.1.4
+442 info uninstall karma-coverage@0.1.4
+443 silly gunzTarPerm extractEntry test/loader.js
+444 silly gunzTarPerm modified mode [ 'test/loader.js', 438, 420 ]
+445 silly gunzTarPerm extractEntry test/run-again.js
+446 silly gunzTarPerm modified mode [ 'test/run-again.js', 438, 420 ]
+447 verbose true,C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules,C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules unbuild karma-coverage@0.1.4
+448 info postuninstall karma-coverage@0.1.4
+449 silly gunzTarPerm extractEntry test/run.js
+450 silly gunzTarPerm modified mode [ 'test/run.js', 438, 420 ]
+451 silly gunzTarPerm extractEntry test/browser/test-browser-instrumentation.js
+452 silly gunzTarPerm modified mode [ 'test/browser/test-browser-instrumentation.js', 438, 420 ]
+453 silly gunzTarPerm extractEntry test/browser/support/phantom-test.client.js
+454 silly gunzTarPerm modified mode [ 'test/browser/support/phantom-test.client.js', 438, 420 ]
+455 silly gunzTarPerm extractEntry test/browser/support/server.js
+456 silly gunzTarPerm modified mode [ 'test/browser/support/server.js', 438, 420 ]
+457 error Error: ENOENT, lstat 'C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\istanbul\lib\report\text.js'
+458 error If you need help, you may report this *entire* log,
+458 error including the npm and node versions, at:
+458 error     <http://github.com/isaacs/npm/issues>
+459 error System Windows_NT 6.1.7601
+460 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "karma-coverage"
+461 error cwd C:\Users\io.352MEDIA\Documents\GitHub\Mean
+462 error node -v v0.10.24
+463 error npm -v 1.3.23
+464 error path C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\istanbul\lib\report\text.js
+465 error fstream_path C:\Users\io.352MEDIA\Documents\GitHub\Mean\node_modules\karma-coverage\node_modules\istanbul\lib\report\text.js
+466 error fstream_type File
+467 error fstream_class FileWriter
+468 error code ENOENT
+469 error errno 34
+470 error fstream_stack C:\Program Files\nodejs\node_modules\npm\node_modules\fstream\lib\writer.js:284:26
+470 error fstream_stack Object.oncomplete (fs.js:107:15)
+471 verbose exit [ 34, true ]
