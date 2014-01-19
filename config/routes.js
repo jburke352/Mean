@@ -1,8 +1,7 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Route    = mongoose.model('Route'),
-    Router   = mongoose.model('Router');
+    Route    = mongoose.model('Route');
     
 
 module.exports = function(app, passport, auth) {
@@ -22,7 +21,8 @@ module.exports = function(app, passport, auth) {
 
     //app.get('/users/me', router.get);
     pages.setApp(app);
-    
+
+
     // function exists(route) {
     //     return Object.keys(app.routes).some(function (verb) {
     //         return app.routes[verb].some(function (model) {

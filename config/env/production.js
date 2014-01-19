@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: "mongodb://localhost/mean",
+    db: "mongodb://mongo1.352media.com,mongo2.352media.com,mongo3.352media.com/circle_js?replicaSet=cluster1",
     app: {
         name: "MEAN - A Modern Stack - Production"
     },
