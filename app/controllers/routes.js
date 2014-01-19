@@ -1,15 +1,9 @@
 'use strict';
 
-/**
- * Module dependencies.
- */
 var mongoose    = require('mongoose'),
     Route       = mongoose.model('Route'),
     _           = require('lodash');
 
-/**
- * Find article by id
- */
 exports.route = function(req, res, next, id) {
     Route.load(id, function(err, route) {
         if (err) return next(err);
@@ -20,10 +14,6 @@ exports.route = function(req, res, next, id) {
     });
 };
 
-
-/**
- * List of Articles
- */
 exports.all = function(req, res) {
     Route.find().sort('-path').exec(function(err, models) {
         if (err) {
@@ -36,9 +26,6 @@ exports.all = function(req, res) {
     });
 };
 
-/**
- * Create
- */
 exports.create = function(req, res) {
     var model   = new Route(req.body);
 
@@ -54,9 +41,6 @@ exports.create = function(req, res) {
     });
 };
 
-/**
- * Delete
- */
 exports.destroy = function(req, res) {
     var model = req.route;
 
@@ -72,9 +56,6 @@ exports.destroy = function(req, res) {
     });
 };
 
-/**
- * Update
- */
 exports.update = function(req, res) {
     var model = req.route;
     model = _.extend(model, req.body);
@@ -92,9 +73,6 @@ exports.update = function(req, res) {
     });
 };
 
-/**
- * Show
- */
 exports.show = function(req, res) {
     res.jsonp(req.route);
 };

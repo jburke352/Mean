@@ -25,7 +25,7 @@ angular.module('mean.pages').controller('PagesController', ['$scope', '$routePar
         });
     };
 
-    $scope.findOne = function() {        
+    $scope.findOne = function() {
         Pages.get({pageId: $routeParams.pageId}, function(page) {
             $scope.page = page;
         });

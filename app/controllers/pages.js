@@ -2,9 +2,6 @@
 
 var app;
 
-/**
- * Module dependencies.
- */
 var mongoose    = require('mongoose'),
     Page        = mongoose.model('Page'),
     router      = require('../router');
@@ -13,22 +10,16 @@ exports.setApp = function (App) {
     app = App;
 };
 
-/**
- * Find article by id
- */
 exports.page = function(req, res, next, id) {
     Page.load(id, function(err, page) {
         if (err) return next(err);
         if (!page) return next(new Error('Failed to load page ' + id));
-        
+
         req.page = page;
         next();
     });
 };
 
-/**
- * List of Articles
- */
 exports.all = function(req, res) {
     console.log('all');
     Page.find().sort('-title').exec(function(err, models) {
@@ -42,10 +33,6 @@ exports.all = function(req, res) {
     });
 };
 
-
-/**
- * Create a article
- */
 exports.create = function(req, res) {
     var model = new Page(req.body);
 
@@ -63,9 +50,6 @@ exports.create = function(req, res) {
     });
 };
 
-/**
- * Show
- */
 exports.show = function(req, res) {
     console.log('show');
     res.jsonp(req.page);
