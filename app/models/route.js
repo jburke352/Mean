@@ -14,7 +14,8 @@ var RouteSchema = new Schema({
     controller: {type: String},
     created:    {type: Date,   default: Date.now},
     verb:       {type: String},
-    path:       {type: String}
+    path:       {type: String},
+    page:       {type: Schema.ObjectId, ref: 'Page'}
 });
 
 /**

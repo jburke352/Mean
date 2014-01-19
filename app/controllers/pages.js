@@ -1,10 +1,17 @@
 'use strict';
 
+var app;
+
 /**
  * Module dependencies.
  */
 var mongoose    = require('mongoose'),
-    Page        = mongoose.model('Page');
+    Page        = mongoose.model('Page'),
+    router      = require('../router');
+
+exports.setApp = function (App) {
+    app = App;
+};
 
 /**
  * Find article by id
@@ -41,15 +48,16 @@ exports.all = function(req, res) {
  */
 exports.create = function(req, res) {
     var model = new Page(req.body);
-    console.log(model);
 
-    model.save(function(err) {
+    model.save(function(err, resp) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
                 routes: model
             });
         } else {
+            router.add(app, resp);
+
             res.jsonp(model);
         }
     });
