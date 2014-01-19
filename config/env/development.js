@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    db: "mongodb://WEB_USER_Circle_js:Kx6fgJgw2pRT@mongo2.352media.com/circle_js",
+    db: "mongodb://hyperion.352media.local:27021/test",
     app: {
         name: "MEAN - A Modern Stack - Development"
     },
