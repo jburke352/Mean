@@ -2,7 +2,6 @@
     "name": "mean",
     "version": "0.1.2",
     "dependencies": {
-        "karma": "latest",
         "angular": "latest",
         "angular-resource": "latest",
         "angular-cookies": "latest",
