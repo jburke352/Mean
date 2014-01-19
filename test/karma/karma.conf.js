@@ -35,6 +35,12 @@ module.exports = function (config) {
 			'test/karma/unit/**/*.js'
 		],
 
+        plugins: [
+            'karma-jasmine',
+            'karma-coverage-0.11',
+            'karma-chrome-launcher',
+            'karma-firefox-launcher'
+        ],
 
 		// list of files to exclude
 		exclude: [
@@ -53,7 +59,10 @@ module.exports = function (config) {
 			// do not include tests or libraries
 			// (these files will be instrumented by Istanbul)
 			'public/js/controllers/**/*.js': ['coverage'],
-			'public/js/services/**/*.js': ['coverage']
+			'public/js/services/**/*.js': ['coverage'],
+            '**/app/js/*/*.js' : ['coverage'],
+            '**/app/js/modules/*/*.js' : ['coverage'],
+            '**/app/js/services/*/*.js' : ['coverage']
 		},
 
 		coverageReporter: {
@@ -86,7 +95,7 @@ module.exports = function (config) {
 		// - Safari (only Mac)
 		// - PhantomJS
 		// - IE (only Windows)
-		browsers: ['PhantomJS'],
+		browsers: ['Chrome'],
 
 
 		// If browser does not capture in given timeout [ms], kill it
