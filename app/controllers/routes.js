@@ -25,7 +25,7 @@ exports.route = function(req, res, next, id) {
  * List of Articles
  */
 exports.all = function(req, res) {
-    Route.find().sort('-created').exec(function(err, models) {
+    Route.find().sort('-path').exec(function(err, models) {
         if (err) {
             res.render('error', {
                 status: 500
@@ -40,8 +40,7 @@ exports.all = function(req, res) {
  * Create
  */
 exports.create = function(req, res) {
-    var model = new Route(req.body);
-    console.log(model);
+    var model   = new Route(req.body);
 
     model.save(function(err) {
         if (err) {

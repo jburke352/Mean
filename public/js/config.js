@@ -9,6 +9,7 @@ angular.module('mean').config(['$routeProvider',
         when('/articles/:articleId/edit',   { templateUrl: 'views/articles/edit.html' }).
         when('/articles/:articleId',        { templateUrl: 'views/articles/view.html' }).
         when('/pages/create',               { templateUrl: 'views/pages/create.html' }).
+        when('/pages/:pageId/edit',         { templateUrl: 'views/pages/edit.html' }).
         when('/pages',                      { templateUrl: 'views/pages/list.html' }).
         when('/routes/create',              { templateUrl: 'views/routes/create.html' }).
         when('/routes/:routeId/edit',       { templateUrl: 'views/routes/edit.html' }).

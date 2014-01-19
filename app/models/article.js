@@ -11,7 +11,7 @@ var mongoose    = require('mongoose'),
  * Article Schema
  */
 var ArticleSchema = new Schema({
-    created:    {type: Date,    default: Date.now },
+    created:    {type: Date,    default: Date.now},
     title:      {type: String,  default: '',    trim: true},
     content:    {type: String,  default: '',    trim: true},
     user:       {type: Schema.ObjectId, ref: 'User'}

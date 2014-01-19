@@ -1,7 +1,8 @@
 'use strict';
 
 var mongoose = require('mongoose'),
-    Route    = mongoose.model('Route');
+    Route    = mongoose.model('Route'),
+    Router   = mongoose.model('Router');
     
 
 module.exports = function(app, passport, auth) {
@@ -10,13 +11,18 @@ module.exports = function(app, passport, auth) {
         routes      = require('../app/controllers/routes'),
         articles    = require('../app/controllers/articles'),
         pages       = require('../app/controllers/pages'),
+        router      = require('../app/router'),
         controllers = {
             'users':    users, 
             'routes':   routes,
             'articles': articles,
             'pages':    pages,
+            'router':   router
         };
 
+    //app.get('/users/me', router.get);
+    pages.setApp(app);
+    
     // function exists(route) {
     //     return Object.keys(app.routes).some(function (verb) {
     //         return app.routes[verb].some(function (model) {
@@ -27,13 +33,13 @@ module.exports = function(app, passport, auth) {
     //     });
     // }
 
-    // function exists(verb, route) {
-    //     return app.routes[verb].some(function (model) {
-    //         if (model.path === route) {
-    //             return true;
-    //         }
-    //     });
-    // }
+    function exists(verb, route, callback, context) {
+        callback.call(context, app.routes[verb].some(function (model) {
+            if (model.path === route) {
+                return true;
+            }
+        }));
+    }
 
     // app.get('/users/me', users.me);
     Route.find(function (err, models) {
@@ -57,11 +63,6 @@ module.exports = function(app, passport, auth) {
     app.get('/signin', users.signin);
     app.get('/signout', users.signout);
     app.get('/signup', users.signup);
-
-    //app.post('/users', users.create);    
-    //app.get('/routes', auth.requiresLogin, routes.all);
-    //app.post('/routes', auth.requiresLogin, routes.create);
-    //app.get('/articles', articles.all);
 
     //Setting the local strategy route
     app.post('/users/session', passport.authenticate('local', {
@@ -110,8 +111,6 @@ module.exports = function(app, passport, auth) {
         failureRedirect: '/signin'
     }), users.authCallback);
 
-    //Finish with setting up the userId param
-    app.param('userId', users.user);
 
     //Article Routes    
     app.get('/articles', articles.all);
@@ -120,13 +119,12 @@ module.exports = function(app, passport, auth) {
     app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
     app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
 
-    
-    //Finish with setting up the articleId param
-    app.param('articleId', articles.article);
-    app.param('routeId', routes.route);
+    app.param('articleId',  articles.article);
+    app.param('routeId',    routes.route);
+    app.param('userId',     users.user);
+    app.param('pageId',     pages.page);
 
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);
-
 };
