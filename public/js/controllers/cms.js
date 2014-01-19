@@ -15,9 +15,9 @@ angular.module('mean.cms').controller('CMSController', ['$scope', '$routeParams'
         //    page.updated = [];
         //}
         //page.updated.push(new Date().getTime());
-        alert(page.route);
+        //alert(page.route);
         page.$update({path: $routeParams.path}, function() {
-            alert(page.route);
+            //alert(page.route);
             Notes.update({ id:$id }, note);
             $location.path(page.route);
         })
