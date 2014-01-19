@@ -4,17 +4,17 @@
  * Module dependencies.
  */
 var mongoose    = require('mongoose'),
-    Page        = mongoose.model('Page');
+    _           = require('lodash');
 
 /**
  * Find article by id
  */
-exports.page = function(req, res, next, id) {
-    Page.load(id, function(err, page) {
+exports.route = function(req, res, next, id) {
+    Route.load(id, function(err, route) {
         if (err) return next(err);
-        if (!page) return next(new Error('Failed to load page ' + id));
+        if (!route) return next(new Error('Failed to load route ' + id));
         
-        req.page = page;
+        req.route = route;
         next();
     });
 };
@@ -23,8 +23,7 @@ exports.page = function(req, res, next, id) {
  * List of Articles
  */
 exports.all = function(req, res) {
-    console.log('all');
-    Page.find().sort('-title').exec(function(err, models) {
+    Route.find().sort('-path').exec(function(err, models) {
         if (err) {
             res.render('error', {
                 status: 500
@@ -35,13 +34,11 @@ exports.all = function(req, res) {
     });
 };
 
-
 /**
- * Create a article
+ * Create
  */
 exports.create = function(req, res) {
-    var model = new Page(req.body);
-    console.log(model);
+    var model   = new Route(req.body);
 
     model.save(function(err) {
         if (err) {
@@ -59,7 +56,5 @@ exports.create = function(req, res) {
  * Show
  */
 exports.show = function(req, res) {
-    console.log('show');
-    res.jsonp(req.page);
+    res.jsonp(req.route);
 };
-
