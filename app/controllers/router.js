@@ -1,7 +1,7 @@
 'use strict';
 
-var mongoose    = require('mongoose'),
-    _           = require('lodash');
+var mongoose = require('mongoose'),
+    Route    = mongoose.model('Route');
 
 exports.route = function(req, res, next, id) {
     Route.load(id, function(err, route) {
