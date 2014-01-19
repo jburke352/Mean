@@ -10,12 +10,16 @@ module.exports = function(app, passport, auth) {
         routes      = require('../app/controllers/routes'),
         articles    = require('../app/controllers/articles'),
         pages       = require('../app/controllers/pages'),
+        router      = require('../app/router'),
         controllers = {
             'users':    users, 
             'routes':   routes,
             'articles': articles,
             'pages':    pages,
+            'router':   router
         };
+
+    pages.setApp(app);
 
     // function exists(route) {
     //     return Object.keys(app.routes).some(function (verb) {
@@ -27,13 +31,13 @@ module.exports = function(app, passport, auth) {
     //     });
     // }
 
-    // function exists(verb, route, callback, context) {
-    //     callback.call(context, app.routes[verb].some(function (model) {
-    //         if (model.path === route) {
-    //             return true;
-    //         }
-    //     }));
-    // }
+    function exists(verb, route, callback, context) {
+        callback.call(context, app.routes[verb].some(function (model) {
+            if (model.path === route) {
+                return true;
+            }
+        }));
+    }
 
     // app.get('/users/me', users.me);
     Route.find(function (err, models) {
@@ -128,5 +132,4 @@ module.exports = function(app, passport, auth) {
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);
-
 };
