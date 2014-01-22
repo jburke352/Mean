@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose'),
     Route    = mongoose.model('Route');
-    
+
 
 module.exports = function(app, passport, auth) {
     //User Routes
@@ -12,26 +12,14 @@ module.exports = function(app, passport, auth) {
         pages       = require('../app/controllers/pages'),
         router      = require('../app/router'),
         controllers = {
-            'users':    users, 
+            'users':    users,
             'routes':   routes,
             'articles': articles,
             'pages':    pages,
             'router':   router
         };
 
-    //app.get('/users/me', router.get);
     pages.setApp(app);
-
-
-    // function exists(route) {
-    //     return Object.keys(app.routes).some(function (verb) {
-    //         return app.routes[verb].some(function (model) {
-    //             if (model.path === route) {
-    //                 return true;
-    //             }
-    //         });
-    //     });
-    // }
 
     function exists(verb, route, callback, context) {
         callback.call(context, app.routes[verb].some(function (model) {
@@ -41,7 +29,6 @@ module.exports = function(app, passport, auth) {
         }));
     }
 
-    // app.get('/users/me', users.me);
     Route.find(function (err, models) {
         if (err) {
             res.render('error', {status: 500});
@@ -60,9 +47,31 @@ module.exports = function(app, passport, auth) {
         });
     });
 
-    app.get('/signin', users.signin);
-    app.get('/signout', users.signout);
-    app.get('/signup', users.signup);
+    //Article Routes
+    app.get('/articles',            articles.all);
+    app.post('/articles',           auth.requiresLogin, articles.create);
+    app.get('/articles/:articleId', articles.show);
+    app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
+    app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
+
+    //Sign in/out
+    app.get('/signin',              users.signin);
+    app.get('/signout',             users.signout);
+    app.get('/signup',              users.signup);
+
+    //Routes
+    app.get('/routes',              routes.all);
+    app.post('/routes',             routes.create);
+    app.get('/routes/:routeId',     routes.show);
+
+    //Pages
+    app.get('/pages',               pages.all);
+    app.post('/pages',              pages.create);
+    app.get('/pages/:pageId',       pages.show);
+
+    //Users
+    app.post('/users',              users.create);
+    app.get('/users/me',            users.me);
 
     //Setting the local strategy route
     app.post('/users/session', passport.authenticate('local', {
@@ -110,14 +119,6 @@ module.exports = function(app, passport, auth) {
     app.get('/auth/google/callback', passport.authenticate('google', {
         failureRedirect: '/signin'
     }), users.authCallback);
-
-
-    //Article Routes    
-    app.get('/articles', articles.all);
-    app.post('/articles', auth.requiresLogin, articles.create);
-    app.get('/articles/:articleId', articles.show);
-    app.put('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.update);
-    app.del('/articles/:articleId', auth.requiresLogin, auth.article.hasAuthorization, articles.destroy);
 
     app.param('articleId',  articles.article);
     app.param('routeId',    routes.route);
