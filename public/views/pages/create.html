@@ -1,0 +1,19 @@
+<section data-ng-controller="PagesController">
+    <form class="form" data-ng-submit="create()">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required />
+        </div>
+        <div class="form-group">
+            <label for="content">Route</label>
+            <input type="text" data-ng-model="route" id="route" class="form-control" placeholder="Route" required />
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input type="text" data-ng-model="content" id="content" class="form-control" placeholder="Content" required />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn">
+        </div>
+    </form>
+</section>

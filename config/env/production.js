@@ -1,8 +1,7 @@
 'use strict';
 
 module.exports = {
-        db: "mongodb://WEB_USER_Circle_js:Kx6fgJgw2pRT@mongo2.352media.com/circle_js",
-		 port: 80,
+    db: "mongodb://localhost/mean-prod",
     app: {
         name: "MEAN - A Modern Stack - Production"
     },

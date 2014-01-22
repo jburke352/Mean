@@ -1,0 +1,23 @@
+<section data-ng-controller="RoutesController">
+    <form class="form" data-ng-submit="create()">
+        <div class="form-group">
+            <label for="title">Path</label>
+            <input type="text" data-ng-model="path" id="path" class="form-control" placeholder="Path" required />
+        </div>
+        <div class="form-group">
+            <label for="content">Controller</label>
+            <input type="text" data-ng-model="controller" id="controller" class="form-control" placeholder="Controller" required />
+        </div>
+        <div class="form-group">
+            <label for="content">Action</label>
+            <input type="text" data-ng-model="action" id="action" class="form-control" placeholder="Action" required />
+        </div>
+        <div class="form-group">
+            <label for="content">Verb</label>
+            <input type="text" data-ng-model="verb" id="verb" class="form-control" placeholder="Http Verb" required />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn">
+        </div>
+    </form>
+</section>

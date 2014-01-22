@@ -51,9 +51,7 @@ angular.module('mean.articles').controller('ArticlesController', ['$scope', '$ro
     };
 
     $scope.findOne = function() {
-        Articles.get({
-            articleId: $routeParams.articleId
-        }, function(article) {
+        Articles.get({articleId: $routeParams.articleId}, function(article) {
             $scope.article = article;
         });
     };
