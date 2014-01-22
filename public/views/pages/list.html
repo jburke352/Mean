@@ -1,7 +1,11 @@
 <section data-ng-controller="PagesController" data-ng-init="find()">
     <ul class="routes unstyled">
         <li data-ng-repeat="page in pages">
-            <h2><a data-ng-href="#!{{page.route}}">{{page.title}}</a></h2>
+            <h2><a data-ng-href="#!{{page.route}}">{{page.title}}</a>
+            	<a class="btn" href="/#!/pages/{{page._id}}/edit">
+            		<i class="glyphicon glyphicon-edit"></i>
+        		</a>
+            </h2>
         </li>
     </ul>
     <h1 data-ng-hide="!pages || pages.length">No pages yet. <br> Why don't you <a href="/#!/pages/create">Create One</a>?</h1>
